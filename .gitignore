@@ -70,3 +70,4 @@ env/
 env/*
 #Ipython Notebook
 .ipynb_checkpoints
+notv2016/images/
