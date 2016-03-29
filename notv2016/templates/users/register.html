@@ -1,0 +1,6 @@
+<form method="post" action="/">
+    <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+    {{ form.as_p()|safe }}
+    <input class="ui teal submit button" type="submit" value="Зарегистрироваться"/>
+    <input type="hidden" name="next" value="/" />
+</form>

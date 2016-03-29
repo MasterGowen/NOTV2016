@@ -17,6 +17,9 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf import settings
 
+from django.contrib.auth.views import login, logout
+from users.views import register_user
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 ]
@@ -24,3 +27,10 @@ urlpatterns = [
 
 if 'rosetta' in settings.INSTALLED_APPS:
     urlpatterns.append(url(r'^rosetta/', include('rosetta.urls')))
+
+# AAA
+urlpatterns +=(
+        url(r'^login/', login, {"template_name": "users/login.html"}),
+        url(r'^logout/', logout),
+        url(r'^register/', register_user),
+)
