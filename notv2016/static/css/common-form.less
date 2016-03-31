@@ -1,0 +1,76 @@
+.common-form {
+  .common-form-img { float: right; }
+  .common-form-title { font-family: "open_sanscondbold"; font-size: 30px; font-weight: normal; line-height: 38px; margin: 0 0 10px; position: relative; top: -8px; }
+  &.common-image-form {
+    .common-form-img { margin: -20px 0 0 0; }
+    /*.cont-input.cont-input-long {
+      label { width: 140px; }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] { width: 384px; }
+      select.customSelect { width: 402px; }
+      .hint { display: block; margin-left: 150px; }
+    }*/
+  }
+  .cont-input { font-size: 15px; line-height: 15px; font-family: "open_sansregular";
+    + .cont-input { padding-top: 20px; }
+    + .cont-btn { padding-top: 28px; }
+    + .for-check-list { padding-top: 15px; }
+    + .for-check-link { padding-top: 15px; }
+    label { font-size: 15px; line-height: 15px; font-family: "open_sansregular"; display: inline-block; vertical-align: top; width: 80px; padding-top: 3px; padding-right: 7px;
+      sup { margin-left: 3px; }
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="datetime"] { border: 1px solid #cccccc; padding: 2px 8px; margin: 0 10px 0 0; color: #646464; width: 230px;
+      font-size: 15px; line-height: 15px; font-family: "open_sansregular";
+      &:focus { color: #000000; }
+
+    }
+    &.cont-input-long {
+      label { width: 140px; }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] { width: 384px; }
+      select.customSelect { width: 402px; }
+      .hint { display: block; margin-left: 150px; }
+    }
+    &.file-attach {
+      label { padding-top: 0; }
+    }
+    input[type="checkbox"] { margin: 1px 0 0 0; }
+    input[type="submit"] { font-size: 18px; padding: 3px 10px 4px; line-height: 18px; font-family: "open_sansregular"; font-weight: bold; }
+    &.cont-checkbox { margin-left: 90px; padding-top: 10px;
+      label { width: auto; padding: 0 0 0 5px; }
+    }
+    .hint { display: block;
+      &.hint-small { font-size: 13px; line-height: 15px; color: #646464; }
+    }
+    .black { color: #000; }
+
+  }
+  .customSelect { border: 1px solid #cccccc; color: #CCCCCC; margin: 0; font-family: "open_sansregular"; font-weight: normal;
+    width: auto; padding: 3px 8px 5px; font-size: 13px; text-align: left; position: relative; z-index: 1;
+    &.customSelectChanged { color: #000000; }
+    &:after { content: ''; position: absolute; width: 0; height: 0; border-style: solid; border-width: 3px; border-color: #ccc transparent transparent;
+      top: 50%; margin-top: -1px; right: 8px; }
+  }
+  select.customSelect { color: #cccccc; position: relative; z-index: 2; width: 192px;
+    &:focus { color: #000000; }
+  }
+  .check-list { display: inline-block; vertical-align: top; *display: inline; *zoom: 1;
+    .cont-input.cont-checkbox { margin-left: 0; }
+  }
+  .check-link { margin-top: 9px; display: inline-block; vertical-align: top; *display: inline; *zoom: 1;
+    .check-link-item { padding: 3px 5px;
+      + .check-link-item { margin-left: 5px; }
+      &.active { background-color: #f7f7f4; cursor: default; color: #000000;
+        .dashed { border-color: transparent; cursor: default; }
+      }
+    }
+  }
+
+  .file-attach-link { background-color: #E50079; color: #FFFFFF; font-size: 12px; font-family: "open_sansregular"; font-weight: bold;
+    line-height: 14px; padding: 7px 8px 6px; text-decoration: none; white-space: nowrap; }
+}

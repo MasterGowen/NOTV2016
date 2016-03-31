@@ -1,0 +1,8 @@
+<public:component>
+<public:attach event="onreadystatechange" onevent="paint()" />
+<script type="text/javascript">
+	function paint(){
+		this.p?0:(this.previousSibling==null?this.className='odd':(/odd$/.test(this.previousSibling.className) && this.previousSibling.tagName == this.tagName ? this.className="even":this.className="odd"),this.p=1)
+	}
+</script>
+</public:component>

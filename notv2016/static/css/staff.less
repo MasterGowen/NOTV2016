@@ -1,0 +1,69 @@
+.main-title + .staff { margin-top: 20px; }
+
+.staff {
+    .col {
+        background: #ffffff;
+        border: 1px solid #E5E5E5;
+        box-shadow: 0 0 1px #E5E5E5;
+    }
+    
+    .staff-block{ .clearfix; position: relative; padding: 10px 20px 24px 134px; min-height: 194px; font-family: "open_sanslight";
+        p {font-size: 14px; line-height: 21px; margin: 0;}
+        b { font-family: "open_sansbold"; }
+        .name { font-size: 16px; font-family: "open_sanscondbold"; margin-bottom: 1px;
+          img { float: left; margin: 5px 0 0 -122px; border: 1px solid #dddddd; }
+        }
+        
+        .hovered { 
+            display: none; 
+            position: absolute;  
+            z-index: 1;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #ffffff;
+            padding: 10px 20px 24px 134px;
+            .box-shadow(0 0 35px #9a9a9a);
+        }
+        
+        &:hover {
+          .hovered { display: block; }
+        }
+    }
+    
+    .more { color: #f4cbe1;; font-size: 12px; background: #e50079 url(../images/more_arrow.png) no-repeat right center; padding: 6px 24px 6px 10px; font-family: "open_sansbold"; 
+      .text { color: #fff;}
+    }
+    
+    &.staff-main { margin-top: 40px; position: relative;
+        > .row { border-spacing: 20px 0; }
+        .row .row { width: 100%; border-spacing: 0 0;
+            .col { background: none; border:  none; box-shadow: none; }
+        }
+        
+        .col.details { padding: 11px 21px 11px 23px; font-family: "open_sanslight";
+          .title { font-size: 18px; margin-bottom: 12px;
+            a { color: #000; }
+          }
+          p { margin-bottom: 21px; font-size: 14px; line-height: 21px; }
+          p.see-more { margin-top: -3px; }
+          
+        }
+        
+        .div-arrow { 
+            width: 0;
+            height: 100%;        
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            z-index: 1;
+            border-left: 1px solid #E5E5E5;
+            box-shadow: -1px 0 1px #f9f9f9;
+            position: absolute;
+            margin-left: 10px;
+            
+            .arr { position: absolute; background: url(../images/big_arr_l.png) no-repeat right center; width: 47px; height: 78px; top: 50%; right: 0; margin-top: -39px; }
+        } 
+        
+    }
+}

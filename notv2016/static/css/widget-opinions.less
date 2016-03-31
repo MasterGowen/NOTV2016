@@ -1,0 +1,58 @@
+.opinions-list { list-style: none; margin-right: -30px;
+  li { display: inline-block; vertical-align: top; width: 125px; *display: inline; *zoom: 1; font-size: 13px; padding: 0 25px 10px 0; line-height: 14px;
+    .opinions-link { display: block; font-size: 13px; line-height: 14px;
+      + p { margin-top: 8px; }
+      img { border: 1px solid #e5e5e5; margin-bottom: 10px; }
+    }
+    .person-data { font-size: 13px; line-height: 16px; margin-right: -10px; max-height: 33px; overflow: hidden; position: relative;
+    }
+  }
+}
+
+.opinions-scroller { position: relative;
+  .scroller-overflow { overflow: hidden; margin-right: 5px;
+    table { width: 100%; position: relative; border-spacing: 0;
+      td { width: 155px; }
+    }
+  }
+  
+  .scroller-prev {
+    position: absolute;
+    z-index: 1;
+    top: 32px;
+    left: -28px;
+    width: 37px;
+    height: 37px;
+    margin-left: -37px;
+    background: url(../images/scroller_nav.png) no-repeat 0 0;
+    
+    &:hover { background-position: 0 -61px; }
+    &.disabled { display: none; }
+    
+    span { display: none; }
+  }
+  .scroller-next {
+    position: absolute;
+    z-index: 1;
+    top: 32px;
+    right: 4px;
+    width: 37px;
+    height: 37px;
+    margin-right: -37px;
+    background: url(../images/scroller_nav.png) no-repeat right 0;
+    
+    &:hover { background-position: right -61px; }
+    &.disabled { display: none;}
+    
+    span { display: none; }
+  }
+  
+  .opinions-item { width: 130px; font-size: 13px; padding: 0 25px 10px 0; line-height: 14px;
+    .opinions-link { display: block; font-size: 13px; line-height: 14px;
+      + p { margin-top: 8px; }
+      img { border: 1px solid #e5e5e5; margin-bottom: 10px; }
+    }
+    .person-data { font-size: 13px; line-height: 16px; margin-right: -10px; max-height: 33px; overflow: hidden; position: relative;
+    }
+  }
+}

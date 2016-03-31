@@ -1,0 +1,65 @@
+.main-contacts {
+    .base_row();
+    width: @row-width;
+    margin: 20px auto 20px;
+    border-spacing: 0;
+    background: #fff;
+    .box-shadow(0 0 2px #e1e1e1);
+    border: 1px solid #e1e1e1;
+    padding: 13px 0;
+    .pie;
+    
+    .col { padding: 0 18px; }
+    
+    p { font-size: 13px; line-height: 28px; }
+    a { font-family: "open_sanslight";  }
+    .time { font-family: "open_sanslight"; }
+    .adress { position: relative; padding: 0 0 0 18px; line-height: 28px; img { float: left; margin: 3px 0 0 -18px; } }
+    .title { font-size: 18px; font-family: "open_sanscondbold"; margin: 0 0 2px; }
+    .big { font-size: 25px; margin: 5px 0 7px; font-family: "open_sanscondbold";  }
+}
+
+.contact-group {
+  width: @row-width;
+  margin: 32px auto;
+
+}
+.contact-group-title { 
+    font-family: "open_sanslight"; 
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: normal;
+    margin: 0 0 10px;
+}
+.contact-group-content { 
+    background: #ffffff;
+    .base_row();
+    width: 100%;
+    border-spacing: 0;
+    .box-shadow(0 0 2px #e1e1e1);
+    border: 1px solid #e1e1e1;
+    .pie;
+    
+    ul { list-style: none;  }
+    
+    .contact-list {	margin: 14px 10px 17px; list-style: none; 
+      > li { padding: 0 6px 0 20px; margin-top: 20px; background: url(../images/dash_thin.png) no-repeat 0 11px; font-size: 14px; line-height: 20px;
+        &:first-child { margin-top: 0; }
+      }
+    }
+    
+    .contact-item { position: relative; }
+}
+
+.contact-details { display: block;  position: absolute; z-index: 10; top: -10px; left: -10px; width: 100%;
+  .in { position: relative; .box-shadow(0 0 5px #dbdbdb); .pie; padding: 10px 10px 6px; margin-right: -20px; background: #fff; }
+  
+  .contact-name { padding: 0 6px 14px 20px; background: url(../images/dash_thin.png) no-repeat 0 11px; font-size: 14px; line-height: 20px;
+      a { color: #000; }
+  }
+  ul { list-style: none; font-family: "open_sanslight"; 
+    li { background: none !Important; border-top: 1px solid #e3e3e3; font-size: 11px; line-height: 18px; padding: 5px 10px 6px 30px; position: relative; }
+    
+    .contact-icon { float: left; margin: 1px 0 0 -24px; display: inline-block; width: 16px; text-align: center; opacity: .2; filter:alpha(opacity=20);  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";  }
+  }
+}

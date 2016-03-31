@@ -1,0 +1,34 @@
+/* pagination */
+.pagination { margin: 26px 0 8px; .clearfix(); border-top: 1px solid #c7c7c7; padding: 21px 0 0;}
+.pages-list { margin: -1px 0 0; float: left;
+
+    li {
+        .inline-block();
+        vertical-align: middle;
+        padding: 0;
+        background: none;
+        font-size: 12px;
+        margin: 0;
+        
+      &.page { font-size: 14px;
+         a { margin: 1px 5px; color: #000;  }
+      }
+      
+      &.active-page {
+          padding: 1px 6px;
+          margin-left: -1px;
+          margin-right: -1px;
+          color: #fff;
+          background: #e50079;
+      }      
+      
+      &.prev { margin: 0 19px 0 0; color: #9e9e9e;
+          a { color: #9e9e9e; margin: 0;}
+          .arrow { margin-right: 5px;	text-decoration: none; }
+      }
+      &.next {   margin: 0 0 0 19px; color: #9e9e9e;
+          a { color: #9e9e9e; margin: 0;}
+          .arrow {  margin-left: 5px; text-decoration: none; }
+      }
+    }
+}

@@ -1,0 +1,150 @@
+.study{
+    .section.header {
+        .main-menu.breadcrumbs-menu{
+            li{ .inline-block;
+                &:first-child{ .no-bg;
+                    a{ padding:11px 6px 11px 24px; background:url(../images/header/home-ico.gif) no-repeat 4px 13px;}
+                }
+                > span{ color:#fff; font-family:open_sansregular; font-size:12px; padding: 11px 0; display:block;}
+                a{ font-family:open_sansregular; font-size:12px; padding:11px 3px; }
+                &:hover a{ color:#fff;}
+                & + li{ padding-left:20px; background:url(../images/header/arr-ico.gif) no-repeat 0 15px; padding-right: 5px;
+                    &:hover{ background:url(../images/header/arr-ico.gif) no-repeat 0 15px;}
+                }
+
+            }
+        }
+        .for-main-menu.lite-menu{ background:#fff; .box-shadow(0 0 3px -2px #666);
+            .main-menu-wrap{
+                .main-menu{
+                    > li{ .no-bg;
+                        > a{ font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#000; .no-underline; border-bottom:3px solid #fff; padding-bottom:9px;}
+                        &:hover a{ color:#2d54a5; border-bottom:3px solid #2d54a5; }
+                        &.active{
+                            a{ border-bottom:3px solid #2d54a5; }
+                        }
+                    }
+                }
+            }
+        }
+        .header-logo{ margin-top:17px;}
+        .header-center{ margin-top:33px;}
+        .submenu{ margin-top:10px;}
+        .lang-switch + .user-links { padding-top: 17px;}
+    }
+
+    .main-title{
+        h1{ background-color:#2d87a5; color:white;}
+        & + .breadcrumbs{ margin: 14px auto;}
+        & + .promo-slider{ margin-top: 14px;}
+    }
+
+    .section.breadcrumbs{
+        .shadowed-item{ background:white; .box-shadow(0 0 3px rgba(0,0,0,.2)); padding:2px 11px 5px;
+            &:first-child{ margin-left:9px;}
+        }
+    }
+
+    .row-long-menu { background: url("../images/menu/long-menu-bg3.png") no-repeat 0 bottom #fff;}
+
+    .promo-slider{ box-shadow:#999 0 25px 25px -25px; margin-bottom: -5px;
+        .slider-item{ background:white;
+            &.light .item-content{ color:black;}
+        }
+    }
+
+    .widget-menu .widget-menu-list{
+        > li{
+            &.active > span{ color:#292929; margin:0; padding:0; .no-bg; font-weight:600;}
+            ul{ margin: 13px 0 0 16px;
+                li{ list-style-type:none;
+                    a{ font-size:12px;}
+                    &.active span{ font-size:12px; padding:2px 26px 3px; margin-left:-26px;}
+                }
+            }
+        }
+    }
+
+    .widget-group-info{ background:#2d87a5; color:white;
+        .page-links li a{ color:white;}
+    }
+
+    .resources-list .widget-event > div:first-child{ border-top:5px solid #2d87a5;}
+
+    .path-page .menu-path.menu-expand, .path-page-list .menu-path.menu-expand {
+        ul{ .inline-block; vertical-align:top; width:290px;
+            li{ margin-bottom:14px;
+                a{ white-space:normal;}
+                &.active a .arrow{ background:url(../images/path/menu-arrow2.png) no-repeat; background-size:100% 100%; height:100%; top:0;}
+            }
+        }
+    }
+
+    .faculty-title{ padding-left:40px; font-size: 42px; letter-spacing: -1.7px;
+        img{ float:left; margin-left:-50px; }
+    }
+
+    .type-switch{ padding: 4px 0 22px;
+        span{ .inline-block; vertical-align:top; font-family:open_sanslight; font-size:18px;
+            a{ .inline-block; vertical-align:top; line-height:18px; }
+            &.active{
+                a{ border:none; color:black; cursor:default;}
+            }
+            &.switcher{ position:relative; width:32px; height:12px; .border-radius(6px); background-color: #fdcd00; .box-shadow(inset 0 1px 2px rgba(0,0,0,.17)); margin: 4px 10px 0;
+                a{ position:absolute; width:16px; height:16px; .border-radius(8px); background-color: #f7f7f4; .box-shadow(0 2px 3px rgba(0,0,0,.3)); left:0; top:-2px; margin-left: -3px;}
+            }
+        }
+    }
+
+    .path-page .path-list .path-item, .path-page-list .path-list .path-item{ height:auto; padding-right:20px; padding-top:6px;
+        .expand-link{ line-height:36px;}
+        .path-items{ margin-right:-20px; margin-top: 34px;
+            .item{ padding: 10px 20px 4px 12px;
+                h3{ margin-bottom:6px;}
+            }
+        }
+    }
+
+    .path-page-list{
+        .hidden-path-list{ bottom: 0; background-color: #fff; .box-shadow(0 0 7px rgba(0,0,0,.34)); cursor: pointer; left: 60px; position: absolute; top: 0; width: 26px; margin:0; z-index: 19;
+            .menu-ico{ background: url("../images/path/menu-path2.png") no-repeat 8px 16px; height: 60px; position: fixed; width: 26px; display:block;}
+            > *{ display:none;}
+            + .article{
+                .faculty-title{ padding-left:47px;}
+                .path-item.expand{ padding-left:21px;
+                    .path-items{ margin-top:32px; margin-bottom: 27px;
+                        .item{ margin: 0 5px 0 -15px; padding:0 25px 0 15px;
+                            h3{ margin-bottom:16px; margin-top:13px;}
+                            .expand-link{ text-decoration:none;}
+                            &.expand{ background-color: #fff; .box-shadow(0 0 5px rgba(0,0,0,.23));
+                                h3{ margin-bottom:7px;}
+                                .expand-link{ color:black;
+                                    &:after{ content:''; height:0; width:0; border-width:4px 5px; border-style:solid; border-color:black transparent transparent; .inline-block; vertical-align:top; margin: 18px 0 0 6px;}
+                                }
+                                table{ margin-bottom:0;
+                                    th{ font-weight:normal; border-bottom-color:#2d87a5; padding-bottom: 4px;}
+                                    td{ background:none; border-top:1px solid #d0d0d0; padding-bottom: 7px; padding-top: 6px; border-bottom:0;}
+                                    tr{
+                                        td, th{
+                                            &:first-child{ padding-left:0;}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.homepage{
+        .widget-event > div:first-child{ border-top:5px solid #2d87a5;}
+        .for-footer{ padding-bottom:90px;}
+    }
+
+    .for-footer{ padding-bottom:90px;}
+    .footer{ min-height:90px; margin-top:-90px;
+        .copyright{ margin-bottom:0;}
+    }
+}

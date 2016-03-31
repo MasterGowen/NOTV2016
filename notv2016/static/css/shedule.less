@@ -1,0 +1,56 @@
+.main-title {
+  + .content-shedule { margin-top: 30px; }
+}
+
+.content-shedule { width: 910px;
+  .row { border-spacing: 10px 20px; width: 910px; }
+}
+
+/* shedule-group */
+.for-shedule-search { background-color: @white; margin-top: 2px;
+
+  + .shedule-group { padding-top: 16px; 
+    .button-link { margin-top: 5px; }
+  }
+/*vars*/
+  @white: #ffffff;
+  @true_black: #000000;
+  @black: #292929;
+  @pink: #e50079;
+  @yellow: #fece00;
+/*vars*/
+  .button-link.f-right { margin-left: 20px; margin-top: 8px; }
+
+  .shedule-switch { .clearfix(); }
+  .shedule-switch-item { color: @true_black; line-height: 24px; font-size: 24px; font-family: "open_sanscondbold";
+                         padding: 6px 8px 8px; margin-right: 10px; display: inline-block; vertical-align: top; *display: inline; *zoom: 1;
+    &.active { background-color: @yellow;
+      .dashed { border-color: transparent; }
+    }
+    .dashed { display: block; line-height: 24px; }
+  }
+
+  .customSelect { border: 1px solid #cccccc; color: #CCCCCC; margin: 0; font-family: "open_sansregular"; font-weight: normal;
+                  width: auto; padding: 3px 8px; font-size: 13px; text-align: left; position: relative; z-index: 1;
+    &.customSelectChanged { color: @true_black; }
+    &:after { content: ''; position: absolute; width: 0; height: 0; border-style: solid; border-width: 3px; border-color: #ccc transparent transparent;
+              top: 50%; margin-top: -1px; right: 8px; }
+  }
+  select.customSelect { color: #cccccc; position: relative; z-index: 2; width: 192px;
+    &:focus { color: @true_black; }
+  }
+
+  .shedule-search { margin-right: -15px; padding: 15px 0 15px; }
+
+  .shedule-search-input { display: inline-block; padding-right: 8px; vertical-align: top; *display: inline; *zoom: 1;
+    &.shedule-search-left { float: left; width: 280px; padding-right: 10px; display: block; *display: block; *zoom: normal;
+      input[type="text"] { width: 190px; }
+    }
+    label { font-family: "open_sansregular"; font-size: 12px; line-height: 12px; margin-bottom: 6px; display: block; }
+    input {
+      &[type="text"] { border: 1px solid #CCC; color: #CCC; padding: 3px 8px; font-family: "open_sansregular"; font-weight: normal; font-size: 13px;
+        &:focus { color: @true_black; }
+      }
+    }
+  }
+}

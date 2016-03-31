@@ -1,0 +1,21 @@
+.section.old-browser { max-width: 930px; margin: 0 auto; padding: 0 @offset;
+    .header-logo { margin: 60px 0 33px; }
+    h1 { margin-bottom: 15px; }
+    .browser-list { margin: 44px -@offset 0 0; list-style: none; font-size: 0;
+      li { margin: 0; padding: 0; width: 24%; display: inline-block; vertical-align: top; background: none; font-size: 14px; }
+    }
+    .browser {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 20px 0 0;
+      text-align: center;
+      
+      img { display: block; margin-bottom: 3px; }
+    }
+}
+
+.lt-ie8 {
+  .section.old-browser .browser-list li { display: inline; zoom: 1; }
+  .browser {display: inline; zoom: 1;   }
+}

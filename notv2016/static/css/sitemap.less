@@ -1,0 +1,67 @@
+.main-title {
+  + .content-sitemap { margin-top: 30px; }
+}
+
+.content-sitemap { width: 910px;
+    /*vars*/
+      @white: #ffffff;
+      @true_black: #000000;
+      @black: #292929;
+      @pink: #e50079;
+      @yellow: #fece00;
+    /*vars*/
+
+  .row { border-spacing: 10px 20px; width: 910px; }
+
+  .sitemap-switch { .clearfix(); }
+  .sitemap-switch-item { color: @true_black; line-height: 24px; font-size: 24px; font-family: "open_sanscondbold";
+    padding: 6px 8px 8px; margin-right: 10px; display: inline-block; vertical-align: top; *display: inline; *zoom: 1;
+    &.active { background-color: @yellow;
+      .dashed { border-color: transparent; }
+    }
+    .dashed { display: block; line-height: 24px; }
+  }
+
+  .sitemap-content-reload { padding: 24px 8px 40px; }
+  .sitemap-table { border: 0; width: 100%; border-collapse: collapse; table-layout: fixed; margin: 0;
+    td { padding: 0 0 18px; border: 0; }
+    ul { list-style: none;
+      &.level_1_list { margin-right: 15px;
+       + .level_1_list { margin-top: 20px; }
+      }
+    }
+    .level_2_list { margin-top: 12px; margin-left: 15px; }
+    .level_3_list { margin-top: 3px; margin-left: 15px; }
+    .level_4_list { margin-top: 3px; margin-left: 15px; }
+    .level_1 { font-size: 24px; line-height: 28px; font-family: "open_sanslight"; }
+    .level_2 { font-size: 16px; line-height: 20px; font-family: "open_sanslight";
+      + .level_2 { margin-top: 4px; }
+    }
+    .level_3 { font-size: 16px; line-height: 20px; font-family: "open_sanslight";
+      + .level_3 { margin-top: 3px; }
+    }
+    .level_4 { font-size: 16px; line-height: 20px; font-family: "open_sanslight";
+      + .level_4 { margin-top: 3px; }
+    }
+  }
+  .sitemap-slider-list { list-style: none;
+    .sitemap-slider-item { font-size: 24px; line-height: 28px; font-family: "open_sanslight";
+      + .sitemap-slider-item { margin-top: 10px }
+    }
+    .sitemap-slider-link.open { color: @black; }
+    .level_1_list { margin-top: 25px; }
+    .level_1 { font-size: 18px; line-height: 22px; font-family: "open_sanslight"; }
+    .level_2 { font-size: 12px; line-height: 15px; font-family: "open_sanslight";
+      + .level_2 { margin-top: 3px;
+       p.level_2_part { margin-top: 20px }
+      }
+    }
+    .level_3 { font-size: 12px; line-height: 15px; font-family: "open_sanslight";
+      + .level_3 { margin-top: 3px; }
+    }
+    .level_4 { font-size: 12px; line-height: 15px; font-family: "open_sanslight";
+      + .level_4 { margin-top: 3px; }
+    }
+  }
+}
+

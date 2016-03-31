@@ -1,0 +1,331 @@
+
+/* layer-auth */
+.layer-auth,
+.layer-registration,
+.layer-faq {
+  width: 620px;
+  left: 50%;
+  margin-left: -310px;
+}
+.lea_alex,
+.layer-registration .layer-in,
+.layer-faq .layer-in {
+  padding: 15px 20px 0;
+}
+.lea_alex .hint,
+.layer-registration .layer-in .hint,
+.layer-faq .layer-in .hint {
+  color: #646464;
+  font-size: 12px;
+  line-height: 14px;
+  font-family: "open_sansregular";
+}
+.lea_alex .share a,
+.layer-registration .layer-in .share a,
+.layer-faq .layer-in .share a {
+  margin-left: 6px;
+  margin-right: 0;
+  line-height: 16px;
+}
+.lea_alex .share a i,
+.layer-registration .layer-in .share a i,
+.layer-faq .layer-in .share a i {
+  vertical-align: top;
+}
+.lea_alex .cont-input,
+.layer-registration .layer-in .cont-input,
+.layer-faq .layer-in .cont-input {
+  font-size: 15px;
+  line-height: 15px;
+  font-family: "open_sansregular";
+}
+.lea_alex .cont-input + .cont-input,
+.layer-registration .layer-in .cont-input + .cont-input,
+.layer-faq .layer-in .cont-input + .cont-input {
+  padding-top: 20px;
+}
+.lea_alex .cont-input + .cont-btn,
+.layer-registration .layer-in .cont-input + .cont-btn,
+.layer-faq .layer-in .cont-input + .cont-btn {
+  padding-top: 28px;
+}
+.lea_alex .cont-input + .for-check-list,
+.layer-registration .layer-in .cont-input + .for-check-list,
+.layer-faq .layer-in .cont-input + .for-check-list {
+  padding-top: 15px;
+}
+.lea_alex .cont-input + .for-check-link,
+.layer-registration .layer-in .cont-input + .for-check-link,
+.layer-faq .layer-in .cont-input + .for-check-link {
+  padding-top: 15px;
+}
+.lea_alex .cont-input label,
+.layer-registration .layer-in .cont-input label,
+.layer-faq .layer-in .cont-input label {
+  font-size: 15px;
+  line-height: 15px;
+  font-family: "open_sansregular";
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+  padding-top: 6px;
+  padding-right: 7px;
+}
+.lea_alex .cont-input label sup,
+.layer-registration .layer-in .cont-input label sup,
+.layer-faq .layer-in .cont-input label sup {
+  margin-left: 3px;
+}
+.lea_alex .cont-input input[type="text"],
+.layer-registration .layer-in .cont-input input[type="text"],
+.layer-faq .layer-in .cont-input input[type="text"],
+.lea_alex .cont-input input[type="email"],
+.layer-registration .layer-in .cont-input input[type="email"],
+.layer-faq .layer-in .cont-input input[type="email"],
+.lea_alex .cont-input input[type="password"],
+.layer-registration .layer-in .cont-input input[type="password"],
+.layer-faq .layer-in .cont-input input[type="password"],
+.lea_alex .cont-input input[type="datetime"],
+.layer-registration .layer-in .cont-input input[type="datetime"],
+.layer-faq .layer-in .cont-input input[type="datetime"],
+.lea_alex .cont-input textarea,
+.layer-registration .layer-in .cont-input textarea,
+.layer-faq .layer-in .cont-input textarea,
+.lea_alex .cont-input select {
+  border: 1px solid #cccccc;
+  padding: 2px 8px;
+  margin: 0 10px 0 0;
+  color: #646464;
+  width: 300px;
+  height: 28px;
+  font-size: 15px;
+  line-height: 15px;
+  font-family: "open_sansregular";
+}
+.lea_alex .cont-input input[type="text"]:focus,
+.layer-registration .layer-in .cont-input input[type="text"]:focus,
+.layer-faq .layer-in .cont-input input[type="text"]:focus,
+.lea_alex .cont-input input[type="email"]:focus,
+.layer-registration .layer-in .cont-input input[type="email"]:focus,
+.layer-faq .layer-in .cont-input input[type="email"]:focus,
+.lea_alex .cont-input input[type="password"]:focus,
+.layer-registration .layer-in .cont-input input[type="password"]:focus,
+.layer-faq .layer-in .cont-input input[type="password"]:focus,
+.lea_alex .cont-input input[type="datetime"]:focus,
+.layer-registration .layer-in .cont-input input[type="datetime"]:focus,
+.layer-faq .layer-in .cont-input input[type="datetime"]:focus,
+.lea_alex .cont-input textarea:focus,
+.layer-registration .layer-in .cont-input textarea:focus,
+.layer-faq .layer-in .cont-input textarea:focus,
+.lea_alex .cont-input select  {
+  color: #000000;
+}
+.lea_alex .cont-input textarea,
+.layer-registration .layer-in .cont-input textarea,
+.layer-faq .layer-in .cont-input textarea {
+  height: 70px;
+}
+.lea_alex .cont-input.cont-input-long label,
+.layer-registration .layer-in .cont-input.cont-input-long label,
+.layer-faq .layer-in .cont-input.cont-input-long label {
+  width: 140px;
+}
+.lea_alex .cont-input.cont-input-long input[type="text"],
+.layer-registration .layer-in .cont-input.cont-input-long input[type="text"],
+.layer-faq .layer-in .cont-input.cont-input-long input[type="text"],
+.lea_alex .cont-input.cont-input-long input[type="email"],
+.layer-registration .layer-in .cont-input.cont-input-long input[type="email"],
+.layer-faq .layer-in .cont-input.cont-input-long input[type="email"],
+.lea_alex .cont-input.cont-input-long input[type="password"],
+.layer-registration .layer-in .cont-input.cont-input-long input[type="password"],
+.layer-faq .layer-in .cont-input.cont-input-long input[type="password"],
+.lea_alex .cont-input.cont-input-long textarea,
+.layer-registration .layer-in .cont-input.cont-input-long textarea,
+.layer-faq .layer-in .cont-input.cont-input-long textarea {
+  width: 384px;
+}
+.lea_alex .cont-input.cont-input-long select.customSelect,
+.layer-registration .layer-in .cont-input.cont-input-long select.customSelect,
+.layer-faq .layer-in .cont-input.cont-input-long select.customSelect {
+  width: 402px;
+}
+.lea_alex .cont-input.cont-input-long .hint,
+.layer-registration .layer-in .cont-input.cont-input-long .hint,
+.layer-faq .layer-in .cont-input.cont-input-long .hint {
+  display: block;
+  margin-left: 150px;
+}
+.lea_alex .cont-input.file-attach label,
+.layer-registration .layer-in .cont-input.file-attach label,
+.layer-faq .layer-in .cont-input.file-attach label {
+  padding-top: 0;
+}
+.lea_alex .cont-input input[type="checkbox"],
+.layer-registration .layer-in .cont-input input[type="checkbox"],
+.layer-faq .layer-in .cont-input input[type="checkbox"] {
+  margin: 1px 0 0 0;
+}
+.lea_alex .cont-input input[type="submit"],
+.layer-registration .layer-in .cont-input input[type="submit"],
+.layer-faq .layer-in .cont-input input[type="submit"] {
+  font-size: 18px;
+  padding: 5px 13px 9px;
+  line-height: 18px;
+  font-family: "open_sansregular";
+  font-weight: bold;
+}
+.lea_alex .cont-input.cont-checkbox,
+.layer-registration .layer-in .cont-input.cont-checkbox,
+.layer-faq .layer-in .cont-input.cont-checkbox {
+  margin-left: 0px;
+  padding-top: 10px;
+}
+.lea_alex .cont-input.cont-checkbox label,
+.layer-registration .layer-in .cont-input.cont-checkbox label,
+.layer-faq .layer-in .cont-input.cont-checkbox label {
+  width: auto;
+  padding: 0 0 0 5px;
+}
+.lea_alex .cont-input .hint,
+.layer-registration .layer-in .cont-input .hint,
+.layer-faq .layer-in .cont-input .hint {
+  display: block;
+}
+.lea_alex .cont-input .black,
+.layer-registration .layer-in .cont-input .black,
+.layer-faq .layer-in .cont-input .black {
+  color: #000;
+}
+.lea_alex form,
+.layer-registration .layer-in form,
+.layer-faq .layer-in form {
+  padding-bottom: 20px;
+}
+.lea_alex .layer-title + form,
+.layer-registration .layer-in .layer-title + form,
+.layer-faq .layer-in .layer-title + form {
+  padding-top: 6px;
+}
+.lea_alex .pink,
+.layer-registration .layer-in .pink,
+.layer-faq .layer-in .pink {
+  color: #e50079;
+}
+.lea_alex .cont-btn,
+.layer-registration .layer-in .cont-btn,
+.layer-faq .layer-in .cont-btn {
+  /*text-align: center;*/
+}
+.layer-auth .layer-bottom,
+.layer-registration .layer-bottom,
+.layer-faq .layer-bottom {
+  background-color: #dcdcdc;
+  padding: 12px 20px;
+  margin: 0 -20px 0;
+}
+.layer-auth .customSelect,
+.layer-registration .customSelect,
+.layer-faq .customSelect {
+  border: 1px solid #cccccc;
+  color: #CCCCCC;
+  margin: 0;
+  font-family: "open_sansregular";
+  font-weight: normal;
+  width: auto;
+  padding: 3px 8px 5px;
+  font-size: 13px;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+.layer-auth .customSelect.customSelectChanged,
+.layer-registration .customSelect.customSelectChanged,
+.layer-faq .customSelect.customSelectChanged {
+  color: #000000;
+}
+.layer-auth .customSelect:after,
+.layer-registration .customSelect:after,
+.layer-faq .customSelect:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #ccc transparent transparent;
+  top: 50%;
+  margin-top: -1px;
+  right: 8px;
+}
+.layer-auth select.customSelect,
+.layer-registration select.customSelect,
+.layer-faq select.customSelect {
+  color: #cccccc;
+  position: relative;
+  z-index: 2;
+  width: 192px;
+}
+.layer-auth select.customSelect:focus,
+.layer-registration select.customSelect:focus,
+.layer-faq select.customSelect:focus {
+  color: #000000;
+}
+.layer-auth .check-list,
+.layer-registration .check-list,
+.layer-faq .check-list {
+  display: inline-block;
+  vertical-align: top;
+  *display: inline;
+  *zoom: 1;
+}
+.layer-auth .check-list .cont-input.cont-checkbox,
+.layer-registration .check-list .cont-input.cont-checkbox,
+.layer-faq .check-list .cont-input.cont-checkbox {
+  margin-left: 0;
+}
+.layer-auth .check-link,
+.layer-registration .check-link,
+.layer-faq .check-link {
+  margin-top: 9px;
+  display: inline-block;
+  vertical-align: top;
+  *display: inline;
+  *zoom: 1;
+}
+.layer-auth .check-link .check-link-item,
+.layer-registration .check-link .check-link-item,
+.layer-faq .check-link .check-link-item {
+  padding: 3px 5px;
+}
+.layer-auth .check-link .check-link-item + .check-link-item,
+.layer-registration .check-link .check-link-item + .check-link-item,
+.layer-faq .check-link .check-link-item + .check-link-item {
+  margin-left: 5px;
+}
+.layer-auth .check-link .check-link-item.active,
+.layer-registration .check-link .check-link-item.active,
+.layer-faq .check-link .check-link-item.active {
+  background-color: #f7f7f4;
+  cursor: default;
+  color: #000000;
+}
+.layer-auth .check-link .check-link-item.active .dashed,
+.layer-registration .check-link .check-link-item.active .dashed,
+.layer-faq .check-link .check-link-item.active .dashed {
+  border-color: transparent;
+  cursor: default;
+}
+.layer-auth .file-attach-link,
+.layer-registration .file-attach-link,
+.layer-faq .file-attach-link {
+  background-color: #E50079;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-family: "open_sansregular";
+  font-weight: bold;
+  line-height: 14px;
+  padding: 7px 8px 6px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+/* end layer-auth */

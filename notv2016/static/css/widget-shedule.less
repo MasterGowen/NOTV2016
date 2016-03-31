@@ -1,0 +1,116 @@
+/* widget-shedule-standalone */
+.widget-shedule-standalone { background-color: @white; border: 1px solid #ececec; box-shadow: 0 0 1px #E5E5E5; list-style: none; padding: 0 6px 6px;
+  /*vars*/
+    @white: #ffffff;
+    @true_black: #000000;
+    @black: #292929;
+  /*vars*/
+
+  .widget-shedule-title { font-size: 24px; line-height: 24px; font-family: "open_sanslight"; padding: 7px 0 10px 5px; }
+  .widget-shedule-select { background-color: @black; font-size: 12px; color: @white; line-height: 14px;
+    a { color: @white; font-family: "open_sanslight"; text-decoration: none; display: block; padding: 2px 6px 3px; position: relative;
+      &:after { background: url('../images/header/breadcrumbs-ico.gif') no-repeat center bottom transparent;
+        display: block; content: ''; position: absolute; width: 7px; right: 8px; top: 8px; height: 4px;   }
+    }
+  }
+}
+.widget-shedule-item { display: block; padding: 0 6px;
+  /*vars*/
+    @white:   #ffffff;
+    @true_black: #000000;
+    @black: #292929;
+    @black: #292929;
+  /*vars*/
+
+  + .widget-shedule-item dt { border-top: 1px solid #d0d0d0; }
+  dt { color: @true_black; padding: 8px 0 0; font-size: 12px; line-height: 16px; font-family: "open_sanslight";
+    .cabinet { float: right; font-family: "open_sansregular"; display: block; font-size: 11px; }
+    + dd { padding-top: 2px; }
+  }
+  dd { color: @true_black; font-size: 12px; line-height: 16px; font-family: "open_sansbold"; padding-bottom: 12px; }
+
+}
+/*end widget-shedule-standalone*/
+
+/*widget-shedule-tomorrow*/
+.widget-shedule-tomorrow { background-color: @white; border: 1px solid #ececec; list-style: none; padding: 0 6px 6px; .clearfix();
+  /*vars*/
+    @white: #ffffff;
+    @true_black: #000000;
+    @black: #292929;
+  /*vars*/
+  .widget-shedule-title { font-size: 24px; line-height: 24px; font-family: "open_sanslight"; padding: 6px 0 10px 5px; }
+  .widget-shedule-oneday { width: 48%; float: left;
+    + .widget-shedule-oneday { margin-left: 4%; }
+  }
+  .widget-shedule-daytitle { background-color: @black; font-size: 12px; color: @white; line-height: 14px;
+    span { color: @white; font-family: "open_sanslight"; text-decoration: none; display: block; padding: 2px 6px 3px; }
+  }
+}
+/*end widget-shedule-tomorrow*/
+
+/* shedule-group */
+.shedule-group {
+/*vars*/
+  @white: #ffffff;
+  @true_black: #000000;
+  @black: #292929;
+  @pink: #e50079;
+/*vars*/
+  .shedule-group-title { font-family: "open_sanscondbold"; font-size: 30px;  }
+  .shedule-download { float: right; font-size: 12px; margin-top: 5px; }
+  .shedule-group-table { border-collapse: collapse; margin-top: 5px; width: 100%;
+    .shedule-weekday-cell { background-color: @black; color: @white; font-size: 24px; line-height: 24px; padding: 20px 0; vertical-align: top;
+                            font-family: "open_sanslight";
+      &.shedule-weekday-pink { background-color: @pink; }
+    }
+    .shedule-weekday-name { display: block; padding: 6px 0; }
+    td { background-color: #f7f7f4; padding-left: 20px; vertical-align: middle;
+      &.shedule-weekday-time { font-size: 18px; font-family: "open_sanslight"; width: 140px; padding-left: 50px; }
+    }
+    .shedule-weekday-first-row {
+      td { padding-top: 0px }
+      .shedule-weekday-item { margin-top: 20px; }
+    }
+    .shedule-weekday-last-row {
+      td { padding-bottom: 12px }
+    }
+    .shedule-weekday-row + .shedule-weekday-row td { border-top: 1px solid #ebebe8; }
+    .cabinet { float: none; font-size: 12px; }
+    .divide td { background-color: transparent; border: none; padding: 5px 0; line-height: 15px; }
+    .shedule-weekday-item { margin: 12px 0;
+      dd { font-size: 12px; font-family: "open_sansregular"; font-weight: bold; line-height: 13px;
+        + dt { padding-top: 3px; }
+      }
+      dt { font-size: 12px; line-height: 13px; padding-left: 14px; }
+      .cabinet {
+        + .teacher { padding-top: 3px; }
+      }
+      .teacher { display: block; font-size: 12px;
+        .teacher-data { color: #646464; }
+      }
+    }
+  }
+  
+  .subgroup {
+    white-space: nowrap;
+    
+    .number { color: #000; margin: 0 10px; text-decoration: none; 
+      .dashed { .inline-block; height: 36px; line-height: 36px; }
+      
+      &.active { margin-left: 4px; margin-right: 4px;
+        .dashed { border: none; background: #fece00; padding: 0 6px 1px; }
+      }
+    } 
+  }
+  
+  .week-switch { margin: 11px 0 27px; }
+  .week-switch-item { line-height: 24px; font-size: 18px; font-family: "open_sanslight"; margin: 1px 6px 2px; display: inline-block; vertical-align: top; *display: inline; *zoom: 1;
+    &.active { background-color: #f7f7f4; padding: 1px 6px 2px; margin: 0;
+      .dashed { border-color: transparent; color: #000; }
+    }
+    .dashed { display: block; line-height: 24px; }
+  }
+}
+
+/*end shedule-group*/

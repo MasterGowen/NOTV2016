@@ -1,0 +1,116 @@
+.event {border-spacing:15px; margin: auto -20px;}
+/*.event::after{content: "";    display: block; width: 960px; height: 40px; background-image: url("/static/images/div.png"); margin: -5px}*/
+.event input[type="radio"] {display:none;}
+.event label{display:table-cell; width: 290px; cursor: pointer;}
+.event label{border-top: 5px solid #e6e6e6; border-bottom: 5px solid #e6e6e6}
+.event label p{text-align: center;font-family: "open_sanslight";font-size: 26px ;color: #646464; margin-bottom: 7px;}
+.event label article{padding:0 10px 20px;height: 100px}
+.event label article header p{ text-align: left; font-family: "open_sanslight";font-size: 16px;color: #646464;line-height: 18px;}
+.event label article p{text-align: left; font-family: "open_sansregular";font-size: 12px;color: #646464}
+.event label {background: #FFF}
+.event input:checked +label {border-top: 5px solid #2D88A5; border-bottom: 5px solid #2D88A5; background: #FFF; }
+.button_submit {width: 890px; height: 40px; font-size: 18px !important}
+.button_create {width: 530px; height: 40px; font-size: 18px !important}
+.files .file-item {display: inline-block; position: relative;padding: 10px 20px 10px 45px}
+.files .file-item:hover {background-color: #fafafa}
+.files .file-item .del{display:none; position: absolute;right: -5px; top: -5px}
+.files .file-item:hover .del{display:block;}
+.files a[href$=".png"]::before, 
+.files a[href$=".torrent"]::before {
+    position: relative;
+    display: inline-block;
+    float: left;
+    margin-left: -30px;
+    margin-top: 4px;
+    padding: 15px 0px 0px 3px;
+    width: 24px;
+    height: 32px;
+    line-height: 16px;
+    box-sizing: border-box;
+    color: grey;
+    font-family: open_sanssemibold;
+    font-size: 10px;
+    content: "File";
+    background: transparent url("/static/images/files/default.png") repeat scroll 0% 0%;
+}
+
+.files a[href$=".torrent"]::before {
+    position: relative;
+    display: inline-block;
+    float: left;
+    margin-left: -30px;
+    margin-top: 4px;
+    padding: 15px 0px 0px 3px;
+    width: 24px;
+    height: 32px;
+    line-height: 16px;
+    box-sizing: border-box;
+    color: grey;
+    font-family: open_sanssemibold;
+    font-size: 10px;
+    content: "File";
+    background: transparent url("/static/images/files/default.png") repeat scroll 0% 0%;
+}
+.files a[href$=".gif"]::before,
+.files a[href$=".png"]::before {
+    position: relative;
+    display: inline-block;
+    float: left;
+    margin-left: -30px;
+    margin-top: 4px;
+    padding: 14px 0px 0px 3px;
+    width: 24px;
+    height: 32px;
+    line-height: 16px;
+    box-sizing: border-box;
+    font-family: open_sanssemibold;
+    font-size: 9px;
+
+    background: transparent url("../images/files/jpg.png") repeat scroll 0% 0%;
+    color: #000;
+}
+.files a[href$=".png"]::before {content: "png";}
+.files a[href$=".gif"]::before {content: "gif";}
+
+
+.files a[href$=".ppt"]::before,
+.files a[href$=".pptx"]::before,
+.files a[href$=".xls"]::before,
+.files a[href$=".xlsx"]::before,
+.files a[href$=".docx"]::before {
+    position: relative;
+    display: inline-block;
+    float: left;
+    margin-left: -30px;
+    margin-top: 4px;
+    padding: 15px 0px 0px 3px;
+    width: 24px;
+    height: 32px;
+    line-height: 16px;
+    box-sizing: border-box;
+    color: #FFF;
+    font-family: open_sanssemibold;
+    font-size: 10px;
+    background: transparent url("../images/files/doc.png") repeat scroll 0% 0%;}
+
+.files a[href$=".ppt"]::before {content: "ppt";}
+.files a[href$=".pptx"]::before{content: "pptx";}
+.files a[href$=".xls"]::before{content: "xls";}
+.files a[href$=".xlsx"]::before{content: "xlsx";}
+.files a[href$=".docx"]::before{content: "docx";}
+
+
+
+span.change .edit-link {
+    display: inline-block;
+    height: 17px;
+    width: 16px;
+    background: transparent url("../images/edit-link.png") no-repeat scroll 0% 0%;
+margin-left: 2px;
+margin-bottom: -2px;}
+
+/*Непонятные косячки*/
+.section.header .userpanel .userpanel-inner .username {    margin-right: 4px;}
+.section.header .header-right { width: 205px;}
+.section.header .lang-switch {margin-left:75px;}
+

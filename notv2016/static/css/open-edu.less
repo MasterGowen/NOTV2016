@@ -1,0 +1,126 @@
+﻿.open-edu{
+    .section.header {
+        .main-menu.breadcrumbs-menu{
+            li{ .inline-block;
+                &:first-child{ .no-bg;
+                    a{ padding:11px 6px 11px 24px; background:url(../images/header/home-ico.gif) no-repeat 4px 13px;}
+                }
+                > span{ color:#fff; font-family:open_sansregular; font-size:12px; padding: 11px 0; display:block;}
+                a{ font-family:open_sansregular; font-size:12px; padding:11px 3px; }
+                &:hover a{ color:#fff;}
+                & + li{ padding-left:20px; background:url(../images/header/arr-ico.gif) no-repeat 0 15px; padding-right: 5px;
+                    &:hover{ background:url(../images/header/arr-ico.gif) no-repeat 0 15px;}
+                }
+
+            }
+        }
+        .for-main-menu.lite-menu{ background:#fff; .box-shadow(0 0 3px -2px #666);
+            .main-menu-wrap{
+                .main-menu{
+                    > li{ .no-bg;
+                        > a{ font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#000; .no-underline; border-bottom:3px solid #fff; padding-bottom:9px;}
+                        &:hover a{ color:#2d54a5; border-bottom:3px solid #2d54a5; }
+                        &.active{
+                            a{ border-bottom:3px solid #2d54a5; }
+                        }
+                    }
+                }
+            }
+        }
+        .header-logo{ margin-top:25px; margin-bottom: 4px;}
+        .header-center{ margin-top:29px; padding-left:45px;}
+        .header-search{ padding-top:14px;}
+        .header-search-input{ width:301px;}
+        .submenu{ margin-top:9px; margin-left:0;}
+        .lang-switch + .user-links { padding-top: 17px;}
+    }
+
+    .single-teaser{ background:white; height:347px;
+        .teaser-container{ background:url(../images/single-banner.png) no-repeat center top; height:369px;}
+        article{ width:450px; margin:auto; padding-right:480px; padding-top: 25px;
+            h2{ font-size:50px; font-family: open_sanscondlight; margin-bottom: 22px;}
+            p{ font-size:20px; font-family: open_sanscondlight; margin-bottom: 28px;}
+            .button{ font-family: open_sansbold; line-height: 20px; padding: 1px 12px 6px; font-size:18px;
+                span{ text-decoration:underline; font-size:14px;}
+                &:hover span{ text-decoration:none;}
+            }
+        }
+    }
+
+    .promo-slider .slider-item{ background:white; height:347px; width: 450px;
+        .item-content{ color:black; width: 390px;
+            h2{ font-size:50px; font-family: open_sanscondlight; margin-bottom: 22px;}
+            p{ font-size:20px; font-family: open_sanscondlight; margin-bottom: 28px;}
+            .button{ font-family: open_sansbold; line-height: 20px; padding: 1px 12px 6px; font-size:18px;
+                span{ text-decoration:underline; font-size:14px;}
+                &:hover span{ text-decoration:none;}
+            }
+        }
+        &.image { margin-left: -450px; width: 600px;
+            .item-content { width: 690px;}
+        }
+    }
+
+    .main-title{ margin-top:24px;
+        h1{ background-color:#50ccbc; color:white;}
+    }
+    .section .select{ height:30px; line-height:30px;}
+
+    .widget-menu .widget-menu-list{
+        > li{
+            &.active > span{ color:#292929; margin:0; padding:0; .no-bg; font-weight:600;}
+            ul{ margin: 13px 0 0 16px;
+                li{ list-style-type:none;
+                    a{ font-size:12px;}
+                    &.active span{ font-size:12px; padding:2px 26px 3px; margin-left:-26px;}
+                }
+            }
+        }
+    }
+
+    .section > h1{ margin: auto auto -9px; max-width: 880px; padding: 14px 35px 0;}
+
+    .widget-event > div:first-child{ border-top:5px solid #50ccbc;}
+
+    .widget-event{
+        .media{ height:123px; -webkit-transition:height 0.5s linear 0.1s; -moz-transition:height 0.5s linear 0.1s;  -o-transition:height 0.5s linear 0.1s; transition:height 0.5s linear 0.1s;
+            img{ margin-top:0; -webkit-transition:margin 0.5s linear 0.1s; -moz-transition:margin 0.5s linear 0.1s;  -o-transition:margin 0.5s linear 0.1s; transition:margin 0.5s linear 0.1s; display:block;}
+        }
+        .text{ height:167px; -webkit-transition:height 0.5s linear 0.1s; -moz-transition:height 0.5s linear 0.1s;  -o-transition:height 0.5s linear 0.1s; transition:height 0.5s linear 0.1s;
+            &:after{ content:''; position:absolute; bottom:0; left:0; width:100%; height:28px; background:url(../images/article-blur.png) repeat-x bottom; }
+        }
+        &:hover{
+            .media{ height:37px;
+                img{ margin-top:-123px;}
+            }
+            .text{ height:253px;}
+        }
+        &.new-event{
+            &:before{ content:'Новое'; position:absolute; top:5px; left:0; background-color: #59b315; .box-shadow(1px 2px 2px rgba(0,0,0,.3)); color:white; padding:5px 10px; font-size:20px; z-index:10; font-family:open_sanscondlight;}
+        }
+        &.started-event{
+            .media{ padding-bottom:5px;
+                img{ padding-bottom:5px; background-image:url(../images/started.png); background-repeat:repeat-x; background-position:bottom;}
+            }
+        }
+    }
+    .widget-course{
+        table{ border-top:1px solid #d0d0d0; margin-bottom:4px; margin-top: 24px;
+            td{ font-size:18px; line-height:22px;
+                b{ font-size:12px;}
+            }
+            tr:nth-child(odd) td{ background: #f7f7f4;}
+            tr:nth-child(even) td{ background: white;}
+        }
+        .button{ background: url("../images/more_arrow.png") no-repeat right center #e50079; font-family: open_sansbold; font-size: 14px; line-height: 20px; margin-top: 14px; margin-bottom: 20px; padding: 8px 24px 10px 10px; text-decoration: underline;}
+    }
+    .widget-author{ padding-left:80px; margin-top:27px; overflow: hidden;
+        .title{ margin-left:-80px; font-family:open_sanscondbold; font-size:24px; margin-bottom: 12px;}
+        .media{ float:left; margin-left:-80px; margin-top: 5px;}
+        .text{ font-size:14px; line-height:22px;}
+    }
+    .widget-contact{ margin-top:36px;
+        .title{ font-family:open_sanscondbold; font-size:24px; line-height: 29px; margin: 0 50px 14px 0;}
+        p{ line-height:24px;}
+    }
+}

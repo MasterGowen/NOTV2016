@@ -71,3 +71,6 @@ env/*
 #Ipython Notebook
 .ipynb_checkpoints
 notv2016/images/
+staticfiles/
+node_modules/
+bin/
