@@ -25,7 +25,7 @@ SECRET_KEY = 'bwkc@kpk(b4wz^%3r*s=s3^*q4%9q2e7r5e1n$#uk=och*y3f_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -58,7 +58,7 @@ ROOT_URLCONF = 'notv2016.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates/users'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -71,7 +71,7 @@ TEMPLATES = [
     },
     {
         'BACKEND': 'django.template.backends.jinja2.Jinja2',
-        'DIRS': ['templates'],
+        'DIRS': [],
         'APP_DIRS': True,
     },
 ]
@@ -94,15 +94,15 @@ DATABASES = {
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    # },
     # {
     #     'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
     # },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    # },
     # {
     #     'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     # },
@@ -129,4 +129,23 @@ USE_TZ = True
 STATIC_URL = '/static/'
 APPEND_SLASH = False
 
-AUTH_USER_MODEL = 'users.NOTVUSER'
+AUTH_USER_MODEL = 'users.NOTVUser'
+LOGIN_URL = '/login/'
+LOGOUT_REDIRECT_URL = '/'
+
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
+
+STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'pipeline.finders.PipelineFinder',
+)
+
+STATIC_ROOT = '/static/'
+

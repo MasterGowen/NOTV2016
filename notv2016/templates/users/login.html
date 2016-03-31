@@ -1,6 +1,40 @@
-<form method="post" action="/">
-    <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
-    {{ form.as_p()|safe }}
-    <input class="submit button" type="submit" value="Войти"/>
-    <input type="hidden" name="next" value="/" />
-</form>
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class="ui teal medium header">NOTV2016:</h1>
+    <div class="ui fluid error form segment">
+
+        {% if form.non_field_errors %}
+        {% for error in form.non_field_errors %}
+        <div class="ui error message">
+            <div class="header">Ошибка!</div>
+            <p>Введите корректные электронную почту и пароль.</p>
+        </div>
+        {% endfor %}
+        {% endif %}
+
+        {% if form.errors and not form.non_field_errors %}
+        <div class="ui error message">
+            <div class="header">Error!</div>
+            <p>Что-то пошло не так...</p>
+        </div>
+        {% endif %}
+
+        <form method="post" action="login/">
+            {% csrf_token %}
+
+            <div class="required field">
+                <h4>{{ form.username.label_tag }}</h4>
+                {{ form.username }}
+            </div>
+
+            <div class="required field">
+                <h4>{{ form.password.label_tag }}</h4>
+                {{ form.password }}
+            </div>
+
+            <input class="ui teal submit button" type="submit" value="Login"/>
+            <input type="hidden" name="next" value="/" />
+        </form>
+    </div>
+{% endblock %}

@@ -1,6 +1,73 @@
-<form method="post" action="/">
-    <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
-    {{ form.as_p()|safe }}
-    <input class="ui teal submit button" type="submit" value="Зарегистрироваться"/>
-    <input type="hidden" name="next" value="/" />
-</form>
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <h1 class="ui teal medium header">Регистрация в NOTV2016:</h1>
+    <div class="ui fluid error form segment">
+
+        {% if form.non_field_errors %}
+        {% for error in form.non_field_errors %}
+        <div class="ui error message">
+            <div class="header">Ошибка!</div>
+            <p>Введите корректные электронную почту и пароль.</p>
+        </div>
+        {% endfor %}
+        {% endif %}
+
+        {% if form.errors and not form.non_field_errors %}
+        <div class="ui error message">
+            <div class="header">Ошибка!</div>
+            <p>Что-то пошло не так...</p>
+        </div>
+        {% endif %}
+
+        <form method="post" action="register/">
+            {% csrf_token %}
+
+            <div class="ui teal segment">
+                <div class="required field">
+                    <label>{{ form.email.label_tag }}</label>
+                    {{ form.email }}
+                </div>
+            </div>
+
+            <div class="ui teal segment">
+                <div class="two fields">
+                    <div class="field">
+                        <label>{{ form.first_name.label_tag }}</label>
+                        {{ form.first_name }}
+                    </div>
+
+                    <div class="field">
+                        <label>{{ form.last_name.label_tag }}</label>
+                        {{ form.last_name }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui teal segment">
+                <div class="field">
+                    <label>{{ form.department.label_tag }}</label>
+                    {{ form.department }}
+                </div>
+            </div>
+
+            <div class="ui teal segment">
+                <div class="required field">
+                    <label>{{ form.password1.label_tag }}</label>
+                    {{ form.password1 }}
+                </div>
+                <div class="required field">
+                    <label>{{ form.password2.label_tag }}</label>
+                    {{ form.password2 }}
+                </div>
+            </div>
+
+            <input class="ui teal submit button" type="submit" value="Register"/>
+            <input type="hidden" name="next" value="/" />
+        </form>
+    </div>
+</div>
+
+{% endblock %}

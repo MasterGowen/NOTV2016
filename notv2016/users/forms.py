@@ -1,6 +1,7 @@
 from django import forms
 from .models import NOTVUser
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
+from django.contrib.auth.forms import AuthenticationForm
 
 
 class UserCreationForm(forms.ModelForm):
