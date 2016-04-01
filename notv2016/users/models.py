@@ -80,6 +80,12 @@ class NOTVUser(AbstractBaseUser):
         default=False,
     )
 
+    is_active = models.BooleanField(
+        verbose_name='Активный',
+        default=True,
+    )
+
+
     is_paid = models.BooleanField(
         verbose_name='Оплатил',
         default=False,
