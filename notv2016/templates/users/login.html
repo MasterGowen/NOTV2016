@@ -1,8 +1,36 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1 class="ui teal medium header">NOTV2016:</h1>
-    <div class="ui fluid error form segment">
+
+<div class="for-footer">
+    <div class="main-title">
+        <h1><span class="in"><span>Войти в личный кабинет</span></span></h1>
+    </div>
+    <div class="section breadcrumbs">
+        <div class="row">
+            <div class="col3">
+                <span class="breadcrumbs-item">
+                    <a href="http://notv.urfu.ru/ru">Главная страница</a>
+                </span>
+                <span class="divide">/</span>
+                <span class="breadcrumbs-item">
+                    <a href="" class="no-underline"><span>Войти в личный кабинет</span></a>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="section content">
+        <div class="row">
+            <div class="col2 lea_alex">
+                <header>
+                    <h1 class="title">
+                      <span class="title-super">Укажите свои учетные данные</span>
+                    </h1>
+                  </header>
+
+<!-- начало формы  -->  
+    
+        <div class="ui fluid error form segment">
 
         {% if form.non_field_errors %}
         {% for error in form.non_field_errors %}
@@ -23,18 +51,76 @@
         <form method="post" action="login/">
             {% csrf_token %}
 
-            <div class="required field">
-                <h4>{{ form.username.label_tag }}</h4>
+            <div class="cont-input">
+                <label>{{ form.username.label_tag }}</label>
                 {{ form.username }}
             </div>
 
-            <div class="required field">
-                <h4>{{ form.password.label_tag }}</h4>
+            <div class="cont-input">
+                <label>{{ form.password.label_tag }}</label>
                 {{ form.password }}
             </div>
-
-            <input class="ui teal submit button" type="submit" value="Login"/>
+            <div class="cont-input cont-btn">
+                <input class="button_create" type="submit" value="Войти"/>
+            </div>
             <input type="hidden" name="next" value="/" />
         </form>
     </div>
+<!-- конец формы-->
+
+    </div>
+    <div class="col">
+        <aside role="complementary">
+            <style>
+            .smaller {
+              font-size:80%;
+            }
+            .gray {
+              color: #333;
+            }
+
+            .smaller-header {
+              font-size: 20px;
+            }
+            .justify {
+              text-align: justify;
+              text-indent: 20px;
+            }
+            </style>
+        <div class="smaller">
+            <header>
+                <h3 class="sr gray">Помощь в регистрации</h3>
+            </header>
+            <div class="cta cta-welcome">
+                <h3 class="gray smaller-header">Шаг первый</h3>
+                <p class="justify">
+                     Заполните все поля формы для регистрации. После нажатия кнопки «Зарегистрироваться» вы перейдете на страницу формирования траектории посещения мероприятий конференции, а на вашу электронную почту будет отправлена персональная ссылка на вашу траекторию.
+                </p>
+            </div>
+
+
+<div class="cta cta-nextsteps">
+  <h3 class="gray smaller-header">Шаг второй</h3>
+    <p class="justify">
+
+      Перейдя по вашей персональной ссылке вы сможете изменить вашу траекторию посещения мероприятий конференции, а также прикрепить или удалить документы для публикации в электронном сборнике.
+    </p>
+
+</div>
+
+
+  <div class="cta cta-help">
+    <h3 class="gray smaller-header">Нужна помощь?</h3>
+    <p class="justify">Нужна помощь в регистрации? Вы можете написать нам на <a href="mailto:notv@urfu.ru?subject=Нужна помощь в регистрации">электронную почту</a>.</p>
+    <p>Tакже вы можете нам позвонить по  номеру телефона: 8 (343) 374-58-24</p>
+  </div>
+
+</div>
+
+  </aside>
+                                  
+    </div>
+  </div>
+</div> <!-- /for-footer -->
+</div>
 {% endblock %}
