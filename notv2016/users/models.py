@@ -27,6 +27,7 @@ class NOTVUser(AbstractBaseUser):
     """
     Пользователь
     """
+
     email = models.EmailField(
         verbose_name='Электронная почта',
         max_length=32,
