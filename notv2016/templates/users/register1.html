@@ -1,0 +1,228 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="for-footer">
+    <div class="main-title">
+        <h1><span class="in"><span>Регистрация</span></span></h1>
+    </div>
+    <div class="section breadcrumbs">
+        <div class="row">
+            <div class="col3">
+                <span class="breadcrumbs-item">
+                    <a href="http://notv.urfu.ru/ru">Главная страница</a>
+                </span>
+                <span class="divide">/</span>
+                <span class="breadcrumbs-item">
+                    <a href="" class="no-underline"><span>Регистрация</span></a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+<div class="section content">
+   <div class="row">
+
+      <div class="col2 lea_alex">
+                  <header>
+                    <h1 class="title">
+                      <span class="title-super">Добро пожаловать!</span>
+                    </h1>
+                  </header>
+            
+   
+    <form action="" method="post">
+
+        <input type="hidden" name="csrfmiddlewaretoken" value="J5fbaEHw6yGZyjMXMuDUW58N4P5X1C1Z">
+
+        <div class="cont-input">
+        <label for="id_f">Фамилия:</label>
+        <input id="id_f" maxlength="1024" name="f" type="text">
+        </div>
+
+        <div class="cont-input">
+        <label for="id_i">Имя:</label> 
+        <input id="id_i" maxlength="1024" name="i" type="text">
+        </div>
+
+        <div class="cont-input">
+        <label for="id_o">Отчество:</label>
+        <input id="id_o" maxlength="1024" name="o" type="text">
+        </div>
+
+        <div class="cont-input">
+        <label for="id_org">Организация:</label>
+        <input id="id_org" maxlength="1024" name="org" type="text">
+        </div>
+
+        <div class="cont-input">
+        <label for="id_job">Должность:</label>
+        <input id="id_job" maxlength="1024" name="job" type="text">
+        </div>
+
+        <div class="cont-input">
+        <label for="id_city">Город:</label>
+        <input id="id_city" maxlength="1024" name="city" type="text">
+        </div>
+
+        <div class="cont-input">
+        <label for="id_email">Электронная почта:</label>
+        <input id="id_email" maxlength="1024" name="email" type="email">
+        </div>
+
+        <div class="cont-input">
+        <label for="id_tel">Телефон:</label>
+        <input id="id_tel" maxlength="1024" name="tel" type="text">
+        </div>
+
+        <div class="cont-input">
+        <label for="id_status">Присутствие:</label>
+        <select id="id_status" name="status">
+            <option value="online">Заочно</option>
+            <option value="offline" selected="selected">Очно</option>
+        </select>
+        </div>
+
+
+        <div class="cont-input cont-btn">
+            <input name="submit" id="submit" class="button_create" value="Зарегистрироваться" type="submit">
+        </div>
+        
+
+    </form>
+
+
+            </div>
+                <div class="col">
+                                      <aside role="complementary">
+
+
+
+    
+
+
+<style>
+.smaller {
+  font-size:80%;
+}
+.gray {
+  color: #333;
+}
+
+.smaller-header {
+  font-size: 20px;
+}
+.justify {
+  text-align: justify;
+  text-indent: 20px;
+}
+</style>
+
+
+<div class="smaller">
+
+<header>
+  <h3 class="sr gray">Помощь в регистрации</h3>
+</header>
+  <div class="cta cta-welcome">
+    <h3 class="gray smaller-header">Шаг первый</h3>
+    <p class="justify">
+      Заполните все поля формы для регистрации. После нажатия кнопки «Зарегистрироваться» вы перейдете на страницу формирования траектории посещения мероприятий конференции, а на вашу электронную почту будет отправлена персональная ссылка на вашу траекторию.
+    </p>
+  </div>
+
+
+<div class="cta cta-nextsteps">
+  <h3 class="gray smaller-header">Шаг второй</h3>
+    <p class="justify">
+
+      Перейдя по вашей персональной ссылке вы сможете изменить вашу траекторию посещения мероприятий конференции, а также прикрепить или удалить документы для публикации в электронном сборнике.
+    </p>
+
+</div>
+
+
+  <div class="cta cta-help">
+    <h3 class="gray smaller-header">Нужна помощь?</h3>
+    <p class="justify">Нужна помощь в регистрации? Вы можете написать нам на <a href="mailto:notv@urfu.ru?subject=Нужна помощь в регистрации">электронную почту</a>.</p>
+    <p>Tакже вы можете нам позвонить по  номеру телефона: 8 (343) 374-58-24</p>
+  </div>
+
+</div>
+
+  </aside>
+                                  
+    </div>
+  </div>
+</div> <!-- /for-footer -->
+</div>
+
+
+<div class="container">
+    <h1 class="ui teal medium header">Регистрация в NOTV2016:</h1>
+    <div class="ui fluid error form segment">
+
+        {% if form.non_field_errors %}
+        {% for error in form.non_field_errors %}
+        <div class="ui error message">
+            <div class="header">Ошибка!</div>
+            <p>Введите корректные электронную почту и пароль.</p>
+        </div>
+        {% endfor %}
+        {% endif %}
+
+        {% if form.errors and not form.non_field_errors %}
+        <div class="ui error message">
+            <div class="header">Ошибка!</div>
+            <p>Что-то пошло не так...</p>
+        </div>
+        {% endif %}
+
+        <form method="post" action="register/">
+            {% csrf_token %}
+
+            <div class="ui teal segment">
+                <div class="required field">
+                    <label>{{ form.email.label_tag }}</label>
+                    {{ form.email }}
+                </div>
+            </div>
+
+            <div class="ui teal segment">
+                <div class="two fields">
+                    <div class="field">
+                        <label>{{ form.first_name.label_tag }}</label>
+                        {{ form.first_name }}
+                    </div>
+
+                    <div class="field">
+                        <label>{{ form.last_name.label_tag }}</label>
+                        {{ form.last_name }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui teal segment">
+                <div class="field">
+                    <label>{{ form.department.label_tag }}</label>
+                    {{ form.department }}
+                </div>
+            </div>
+
+            <div class="ui teal segment">
+                <div class="required field">
+                    <label>{{ form.password1.label_tag }}</label>
+                    {{ form.password1 }}
+                </div>
+                <div class="required field">
+                    <label>{{ form.password2.label_tag }}</label>
+                    {{ form.password2 }}
+                </div>
+            </div>
+
+            <input class="ui teal submit button" type="submit" value="Register"/>
+            <input type="hidden" name="next" value="/" />
+        </form>
+    </div>
+</div>
+
+{% endblock %}
