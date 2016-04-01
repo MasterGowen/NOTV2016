@@ -42,7 +42,7 @@ urlpatterns += [
     url(r'^user/password/reset/done/$', password_reset_done,
         {"template_name": "password_reset_done.html"}
     ),
-    url(r'^reset/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$', password_reset_confirm, {'template_name': 'password_reset.html',  'post_reset_redirect': '/logout/'}),
+    url(r'^reset/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$', password_reset_confirm, {'template_name': 'password_change_form.html',  'post_reset_redirect': '/logout/'}),
     url(r'^user/password/done/$', password_reset_complete,
         {"template_name": "password_reset_complete.html"}
         ),

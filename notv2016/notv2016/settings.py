@@ -147,3 +147,9 @@ STATICFILES_FINDERS = (
 
 STATIC_ROOT = '/static/'
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = '10.16.208.172'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = False
