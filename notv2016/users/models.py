@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import BaseUserManager, AbstractBaseUser
+from django.contrib.auth.models import BaseUserManager, AbstractBaseUser, Group
 
 
 class UserManager(BaseUserManager):
@@ -103,6 +103,8 @@ class NOTVUser(AbstractBaseUser):
 
     date = models.DateField(auto_now_add=True, blank=True)
 
+    groups = models.ManyToManyField(Group)
+
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
 
@@ -127,6 +129,10 @@ class NOTVUser(AbstractBaseUser):
     @property
     def is_staff(self):
         return self.is_admin
+
+    @property
+    def is_root(self):
+        return self.is_superuser
 
 
 class Meta:

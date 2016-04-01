@@ -31,9 +31,9 @@ if 'rosetta' in settings.INSTALLED_APPS:
 
 # AAA
 urlpatterns += [
-    url(r'^login/$', login, {"template_name": "login.html"}),
-    url(r'^logout/$', logout, {"next_page": "/"}),
-    url(r'^register/$', register_user),
+    url(r'^login/', login, {"template_name": "login.html"}),
+    url(r'^logout/', logout, {"next_page": "/"}),
+    url(r'^register/', register_user),
     url(r'^$', account),
     url(r'^user/password/reset/$', password_reset,
         {'post_reset_redirect': '/user/password/reset/done/',
