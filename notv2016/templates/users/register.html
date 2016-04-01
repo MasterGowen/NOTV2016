@@ -30,65 +30,69 @@
                   </header>
             
    
-    <form action="" method="post">
 
-        <input type="hidden" name="csrfmiddlewaretoken" value="J5fbaEHw6yGZyjMXMuDUW58N4P5X1C1Z">
-
-        <div class="cont-input">
-        <label for="id_f">Фамилия:</label>
-        <input id="id_f" maxlength="1024" name="f" type="text">
+            {% if form.non_field_errors %}
+        {% for error in form.non_field_errors %}
+        <div class="ui error message">
+            <div class="header">Ошибка!</div>
+            <p>Введите корректные электронную почту и пароль.</p>
         </div>
+        {% endfor %}
+        {% endif %}
 
-        <div class="cont-input">
-        <label for="id_i">Имя:</label> 
-        <input id="id_i" maxlength="1024" name="i" type="text">
+        {% if form.errors and not form.non_field_errors %}
+        <div class="ui error message">
+            <div class="header">Ошибка!</div>
+            <p>Что-то пошло не так...</p>
         </div>
+        {% endif %}
 
-        <div class="cont-input">
-        <label for="id_o">Отчество:</label>
-        <input id="id_o" maxlength="1024" name="o" type="text">
-        </div>
+        <form method="post" action="register/">
+            {% csrf_token %}
 
-        <div class="cont-input">
-        <label for="id_org">Организация:</label>
-        <input id="id_org" maxlength="1024" name="org" type="text">
-        </div>
-
-        <div class="cont-input">
-        <label for="id_job">Должность:</label>
-        <input id="id_job" maxlength="1024" name="job" type="text">
-        </div>
-
-        <div class="cont-input">
-        <label for="id_city">Город:</label>
-        <input id="id_city" maxlength="1024" name="city" type="text">
-        </div>
-
-        <div class="cont-input">
-        <label for="id_email">Электронная почта:</label>
-        <input id="id_email" maxlength="1024" name="email" type="email">
-        </div>
-
-        <div class="cont-input">
-        <label for="id_tel">Телефон:</label>
-        <input id="id_tel" maxlength="1024" name="tel" type="text">
-        </div>
-
-        <div class="cont-input">
-        <label for="id_status">Присутствие:</label>
-        <select id="id_status" name="status">
-            <option value="online">Заочно</option>
-            <option value="offline" selected="selected">Очно</option>
-        </select>
-        </div>
-
-
-        <div class="cont-input cont-btn">
-            <input name="submit" id="submit" class="button_create" value="Зарегистрироваться" type="submit">
-        </div>
-        
-
-    </form>
+             <div class="cont-input">
+                 <label>{{form.email.label_tag}}</label>
+                 {{form.email}}
+             </div>
+             <div class="cont-input">
+                 <label for="id_first_name">{{form.first_name.label_tag}}</label>
+                 {{form.first_name}}
+                 
+             </div>
+             <div class="cont-input">
+                 <label for="id_last_name">{{form.last_name.label_tag}}</label>
+                 {{form.last_name}}
+             </div>
+            <div class="cont-input">
+            <label for="id_department">{{form.department.label_tag}}</label>
+                 {{form.department}}
+            </div>
+             <div class="cont-input">
+             <label for="id_position">{{form.position.label_tag}}</label>
+                 {{form.position}}
+             </div>
+             <div class="cont-input">
+             <label for="id_tel">{{form.tel.label_tag}}</label>
+                 {{form.tel}}
+             </div>
+             <div class="cont-input">
+             <label for="id_status">{{form.status.label_tag}}</label> 
+             <select id="id_status" name="status">
+           {{form.status}}
+           </div>
+             <div class="cont-input">
+             <label for="id_password1">{{form.password1.label_tag}}</label>
+                 {{form.password1}}
+             </div>
+             <div class="cont-input">
+             <label for="id_password2">{{form.password2.label_tag}}</label>
+                 {{form.password2}}
+             </div>
+             <div class="cont-input cont-btn">
+            <input class="button_create" value="Зарегистрироваться" type="submit" />
+            <input type="hidden" name="next" value="/" />
+            </div>
+        </form>
 
 
             </div>
@@ -98,7 +102,7 @@
 
 
     
-{{ form.as_p }}
+
 
 <style>
 .smaller {
@@ -157,72 +161,12 @@
 </div>
 
 
-<div class="container">
-    <h1 class="ui teal medium header">Регистрация в NOTV2016:</h1>
-    <div class="ui fluid error form segment">
 
-        {% if form.non_field_errors %}
-        {% for error in form.non_field_errors %}
-        <div class="ui error message">
-            <div class="header">Ошибка!</div>
-            <p>Введите корректные электронную почту и пароль.</p>
-        </div>
-        {% endfor %}
-        {% endif %}
+    
 
-        {% if form.errors and not form.non_field_errors %}
-        <div class="ui error message">
-            <div class="header">Ошибка!</div>
-            <p>Что-то пошло не так...</p>
-        </div>
-        {% endif %}
 
-        <form method="post" action="register/">
-            {% csrf_token %}
 
-            <div class="ui teal segment">
-                <div class="required field">
-                    <label>{{ form.email.label_tag }}</label>
-                    {{ form.email }}
-                </div>
-            </div>
 
-            <div class="ui teal segment">
-                <div class="two fields">
-                    <div class="field">
-                        <label>{{ form.first_name.label_tag }}</label>
-                        {{ form.first_name }}
-                    </div>
 
-                    <div class="field">
-                        <label>{{ form.last_name.label_tag }}</label>
-                        {{ form.last_name }}
-                    </div>
-                </div>
-            </div>
-
-            <div class="ui teal segment">
-                <div class="field">
-                    <label>{{ form.department.label_tag }}</label>
-                    {{ form.department }}
-                </div>
-            </div>
-
-            <div class="ui teal segment">
-                <div class="required field">
-                    <label>{{ form.password1.label_tag }}</label>
-                    {{ form.password1 }}
-                </div>
-                <div class="required field">
-                    <label>{{ form.password2.label_tag }}</label>
-                    {{ form.password2 }}
-                </div>
-            </div>
-
-            <input class="ui teal submit button" type="submit" value="Register"/>
-            <input type="hidden" name="next" value="/" />
-        </form>
-    </div>
-</div>
 
 {% endblock %}
