@@ -15,9 +15,10 @@ class UserAdmin(VersionAdmin):
     list_filter = ('is_admin',) 
     fieldsets = (
         (None, {'fields': ('email',)}),
-        ('Персональная информация', {'fields': (('first_name', 'last_name'), 'department', 'avatar')}),
-        ('Проекты и права', {'fields': ('is_admin',)}),
+        ('Персональная информация', {'fields': (('first_name', 'last_name'), 'department', 'position', 'tel', 'avatar')}),
+        ('Участие', {'fields': ('status',)}),
         ('Даты', {'fields': ('last_login',)}),
+        ('Проекты и права', {'fields': ('is_paid', 'is_admin',)}),
     )
     add_fieldsets = (
         (None, {

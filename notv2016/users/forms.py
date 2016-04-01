@@ -36,23 +36,11 @@ class UserChangeForm(forms.ModelForm):
 
 
 class RegistrationForm(UserCreationForm):
-    email = forms.EmailField(required=True)
-    first_name = forms.CharField(required=False)
-    last_name = forms.CharField(required=False)
-    department = forms.CharField(required=False)
 
     class Meta:
         model = NOTVUser
-        fields = ('email', 'password1', 'password2')
-
-    def save(self, commit=True):
-        user = super(RegistrationForm, self).save(commit=False)
-        user.email = self.cleaned_data['email']
-        user.first_name = self.cleaned_data['first name']
-        user.last_name = self.cleaned_data['last name']
-        user.department = self.cleaned_data['department']
-        password1 = forms.CharField(label='Пароль', widget=forms.PasswordInput)
-        password2 = forms.CharField(label='Подтверждение пароля', widget=forms.PasswordInput)
+        fields = '__all__'
+        exclude = ['password', 'last_login', 'avatar', 'is_admin', 'is_superuser', 'is_paid']
 
     def clean_password2(self):
         password1 = self.cleaned_data.get('password1')

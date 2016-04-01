@@ -29,10 +29,10 @@ if 'rosetta' in settings.INSTALLED_APPS:
     urlpatterns.append(url(r'^rosetta/', include('rosetta.urls')))
 
 # AAA
-urlpatterns +=(
-        url(r'^login/', login, {"template_name": "login.html"}),
-        url(r'^logout/', logout, {"next_page": "/"}),
-        url(r'^register/', register_user),
-        url(r'^$', account),
+urlpatterns += (
+    url(r'^login/', login, {"template_name": "login.html"}),
+    url(r'^logout/', logout, {"next_page": "/"}),
+    url(r'^register/', register_user),
+    url(r'^$', account),
 )
 

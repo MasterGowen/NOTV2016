@@ -54,6 +54,18 @@ class NOTVUser(AbstractBaseUser):
 
     department = models.CharField(
         verbose_name='Университет/Подразделение',
+        max_length=1024,
+        blank=True,
+    )
+
+    position = models.CharField(
+        verbose_name='Должность',
+        max_length=255,
+        blank=True,
+    )
+
+    tel = models.CharField(
+        verbose_name='Телефон',
         max_length=255,
         blank=True,
     )
@@ -67,6 +79,22 @@ class NOTVUser(AbstractBaseUser):
         verbose_name='Является суперпользователем?',
         default=False,
     )
+
+    is_paid = models.BooleanField(
+        verbose_name='Оплатил',
+        default=False,
+    )
+
+    online = 'online'
+    offline = 'offline'
+    STATUS = (
+        (online, 'Заочно'),
+        (offline, 'Очно')
+    )
+
+    status = models.CharField("Статус", max_length=7, choices=STATUS, default=offline)
+
+    date = models.DateField(auto_now_add=True, blank=True)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
