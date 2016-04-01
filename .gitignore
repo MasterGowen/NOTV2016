@@ -59,7 +59,6 @@ docs/_build/
 # PyBuilder
 target/
 
-*/*/migrations/
 images/*
 db.sqlite3
 .idea/
