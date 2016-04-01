@@ -17,7 +17,8 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf import settings
 
-from django.contrib.auth.views import login, logout
+from django.contrib.auth.views import login, logout, password_reset, password_reset_done, \
+    password_reset_confirm, password_reset_complete
 from users.views import register_user, account
 
 urlpatterns = [
@@ -29,10 +30,21 @@ if 'rosetta' in settings.INSTALLED_APPS:
     urlpatterns.append(url(r'^rosetta/', include('rosetta.urls')))
 
 # AAA
-urlpatterns += (
-    url(r'^login/', login, {"template_name": "login.html"}),
-    url(r'^logout/', logout, {"next_page": "/"}),
-    url(r'^register/', register_user),
+urlpatterns += [
+    url(r'^login/$', login, {"template_name": "login.html"}),
+    url(r'^logout/$', logout, {"next_page": "/"}),
+    url(r'^register/$', register_user),
     url(r'^$', account),
-)
+    url(r'^user/password/reset/$', password_reset,
+        {'post_reset_redirect': '/user/password/reset/done/',
+        'email_template_name': 'password_reset_email.html',
+        "template_name": "password_reset_form.html"}, name="password_reset"),
+    url(r'^user/password/reset/done/$', password_reset_done,
+        {"template_name": "password_reset_done.html"}
+    ),
+    url(r'^reset/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$', password_reset_confirm, {'template_name': 'password_reset.html',  'post_reset_redirect': '/logout/'}),
+    url(r'^user/password/done/$', password_reset_complete,
+        {"template_name": "password_reset_complete.html"}
+        ),
+]
 
