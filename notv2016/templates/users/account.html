@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+        {% if request.user.is_authenticated %}
+            <p>You are {{ request.user }}</p>
+            {{ form.as_p }}
+            <p>Вы можете изменить свои данные, перейдя по <a href="/account/update/"> ссылке</a>.
+            <p>Вы можете изменить свой пароль, перейдя по <a href="/password/change/"> ссылке</a>.
+
+        {%endif%}
+{% endblock %}

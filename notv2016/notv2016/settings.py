@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'debug_toolbar',
     'rosetta',
     'reversion',
     'users',
@@ -150,8 +151,5 @@ STATIC_ROOT = '/static/'
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'tmp', 'emails')
 
-ROSETTA_TRANSLATORS = ["mastergowen@gmail.com", ]
-ROSETTA_ACCESS_CONTROL_FUNCTION = "settings.has_rosetta_access"
-def has_rosetta_access(user):
-    is_translator = (user.email in ROSETTA_TRANSLATORS)
-    return user.is_authenticated() and (user.is_staff or is_translator)
+
+TRANSLATORS = ('mastergowen@gmail.com', )

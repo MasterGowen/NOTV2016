@@ -2,13 +2,16 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.template.context_processors import csrf
 from django.contrib.auth import authenticate, login, update_session_auth_hash
-from django.shortcuts import resolve_url
+from django.shortcuts import resolve_url, get_object_or_404
 from django.contrib.auth.forms import PasswordChangeForm
 from django.template.response import TemplateResponse
 from django.views.decorators.csrf import csrf_protect
-from django.contrib.auth.decorators import login_required
+from django.views.generic.edit import UpdateView
 from django.utils.translation import ugettext as _
+
 from .forms import RegistrationForm
+
+from .models import NOTVUser
 
 import logging
 
@@ -46,9 +49,9 @@ def index(request):
 def account(request):
     user = request.user
 
-    context = {}
+    context = {'user': user}
     context['user'] = request.user
-    return render(request, 'passport.html', context)
+    return render(request, 'account.html', context)
 
 
 @csrf_protect
@@ -77,3 +80,11 @@ def password_change(request,
         context.update(extra_context)
 
     return TemplateResponse(request, template_name, context)
+
+
+class NOTVUserUpdate(UpdateView):
+    model = NOTVUser
+    fields = ['avatar', 'first_name', 'last_name', 'department', 'position', 'tel', 'status']
+
+    def get_object(self):
+        return get_object_or_404(NOTVUser, pk=self.request.session['_auth_user_id'])

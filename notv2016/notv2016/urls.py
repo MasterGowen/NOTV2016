@@ -19,7 +19,7 @@ from django.conf import settings
 
 from django.contrib.auth.views import login, logout, password_reset, password_reset_done, \
     password_reset_confirm, password_reset_complete
-from users.views import register_user, account, index, password_change
+from users.views import register_user, account, index, password_change, NOTVUserUpdate
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -27,7 +27,7 @@ urlpatterns = [
 
 
 if 'rosetta' in settings.INSTALLED_APPS:
-    urlpatterns.append(url(r'^rosetta/', include('rosetta.urls')))
+    urlpatterns.append(url(r'^sadmin/rosetta/', include('rosetta.urls')))
 
 # AAA
 urlpatterns += [
@@ -36,6 +36,7 @@ urlpatterns += [
     url(r'^register/$', register_user),
     url(r'^$', index),
     url(r'^account/$', account),
+    url(r'^account/update/$', NOTVUserUpdate.as_view(template_name ='notvuser_form.html', success_url="/account/")),
     url(r'^password/change/$', password_change),
     url(r'^user/password/reset/$', password_reset,
         {'post_reset_redirect': '/user/password/reset/done/',
@@ -49,4 +50,10 @@ urlpatterns += [
         {"template_name": "password_reset_complete.html"}
         ),
 ]
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns += [
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+    ]
 

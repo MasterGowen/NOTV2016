@@ -10,11 +10,11 @@
         <div class="row">
             <div class="col3">
                 <span class="breadcrumbs-item">
-                    <a href="http://notv.urfu.ru/ru">Главная страница</a>
+                    <a href="http://notv.urfu.ru/ru">{% trans 'Главная страница' %}</a>
                 </span>
                 <span class="divide">/</span>
                 <span class="breadcrumbs-item">
-                    <a href="" class="no-underline"><span>Войти в личный кабинет</span></a>
+                    <a href="" class="no-underline"><span>{% trans 'Войти в личный кабинет' %}</span></a>
                 </span>
             </div>
         </div>
@@ -24,7 +24,7 @@
             <div class="col2 lea_alex">
                 <header>
                     <h1 class="title">
-                      <span class="title-super">Укажите свои учетные данные</span>
+                      <span class="title-super">{% trans 'Укажите свои учетные данные' %}</span>
                     </h1>
                   </header>
 
@@ -36,7 +36,7 @@
         {% for error in form.non_field_errors %}
         <div class="ui error message">
             <div class="header">Ошибка!</div>
-            <p>Введите корректные электронную почту и пароль.</p>
+            <p>{% trans 'Введите корректные электронную почту и пароль.' %}</p>
         </div>
         {% endfor %}
         {% endif %}
@@ -44,11 +44,11 @@
         {% if form.errors and not form.non_field_errors %}
         <div class="ui error message">
             <div class="header">Error!</div>
-            <p>Что-то пошло не так...</p>
+            <p>{% trans 'Что-то пошло не так...' %}</p>
         </div>
         {% endif %}
 
-        <form method="post" action="{% url 'users.views.index' %}">
+        <form method="post" action="{% url 'django.contrib.auth.views.login' %}">
             {% csrf_token %}
 
             <div class="cont-input">
@@ -61,7 +61,7 @@
                 {{ form.password }}
             </div>
             <div class="cont-input cont-btn">
-                <input class="button_create" type="submit" value="Войти"/>
+                <input class="button_create" type="submit" value="{% trans 'Войти' %}"/>
             </div>
             <input type="hidden" name="next" value="{{ next }}" />
         </form>
@@ -89,12 +89,12 @@
             </style>
         <div class="smaller">
             <header>
-                <h3 class="sr gray">Помощь в входе</h3>
+                <h3 class="sr gray">{% trans 'Помощь в входе' %}</h3>
             </header>
             <div class="cta cta-welcome">
                 <h3 class="gray smaller-header"></h3>
                 <p class="justify">
-                     Укажите свои данные, которые были использованные при регистрации. Если вы не можете вспомнить свой пароль, то для востановления его перейдите по данной <a href="/user/password/reset/">ссылке</a>
+                     {% trans 'Укажите свои данные, которые были использованные при регистрации. Если вы не можете вспомнить свой пароль, то для востановления его перейдите по данной <a href="/user/password/reset/">ссылке' %}</a>
                 </p>
             </div>
 
