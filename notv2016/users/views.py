@@ -88,3 +88,10 @@ class NOTVUserUpdate(UpdateView):
 
     def get_object(self):
         return get_object_or_404(NOTVUser, pk=self.request.session['_auth_user_id'])
+
+    def get_context_data(self, **kwargs):
+
+        context = super(NOTVUserUpdate, self).get_context_data(**kwargs)
+        context['user'] = get_object_or_404(NOTVUser, pk=self.request.session['_auth_user_id'])
+
+        return context

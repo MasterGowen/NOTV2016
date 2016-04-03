@@ -1,11 +1,80 @@
 {% extends "base.html" %}
-
+{% load i18n %}
 {% block content %}
-        {% if request.user.is_authenticated %}
-            <p>You are {{ request.user }}</p>
+
+<div class="for-footer">
+    <div class="main-title">
+        <h1><span class="in"><span>{% trans 'Личный кабинет' %}</span></span></h1>
+    </div>
+    <div class="section breadcrumbs">
+        <div class="row">
+            <div class="col3">
+                <span class="breadcrumbs-item">
+                    <a href="http://notv.urfu.ru/ru">{% trans 'Главная страница' %}</a>
+                </span>
+                <span class="divide">/</span>
+                <span class="breadcrumbs-item">
+                    <a href="" class="no-underline"><span>{% trans 'Личный кабинет' %}</span></a>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="section content">
+        <div class="row">
+            <div class="col2 lea_alex">
+                <header>
+                    <h1 class="title">
+                      <span class="title-super">{% trans 'Личный кабинет' %}</span>
+                    </h1>
+                  </header>
+            {% if request.user.is_authenticated %}
+                <p>{% trans "Добро пожаловать, " %}{{ request.user.first_name }} {{ request.user.last_name }}</p>
             {{ form.as_p }}
-            <p>Вы можете изменить свои данные, перейдя по <a href="/account/update/"> ссылке</a>.
-            <p>Вы можете изменить свой пароль, перейдя по <a href="/password/change/"> ссылке</a>.
+                <p>Вы можете изменить свои данные, перейдя по <a href="/account/update/"> ссылке</a>.
+                <p>Вы можете изменить свой пароль, перейдя по <a href="/password/change/"> ссылке</a>.
+                <p>{% trans 'Страница с событиями конференции доступна по <a href="/events/">ссылке.</a>' %}
 
         {%endif%}
+
+    </div>
+    <div class="col">
+        <aside role="complementary">
+            <style>
+            .smaller {
+              font-size:80%;
+            }
+            .gray {
+              color: #333;
+            }
+
+            .smaller-header {
+              font-size: 20px;
+            }
+            .justify {
+              text-align: justify;
+              text-indent: 20px;
+            }
+            </style>
+        <div class="smaller">
+            <header>
+                <h3 class="sr gray">{% trans 'Помощь в входе' %}</h3>
+            </header>
+            <div class="cta cta-welcome">
+                <h3 class="gray smaller-header"></h3>
+                <p class="justify">
+                     {% trans 'Укажите свои данные, которые были использованные при регистрации. Если вы не можете вспомнить свой пароль, то для востановления его перейдите по данной <a href="/user/password/reset/">ссылке' %}</a>
+                </p>
+            </div>
+
+
+
+
+</div>
+
+  </aside>
+
+    </div>
+  </div>
+</div> <!-- /for-footer -->
+</div>
 {% endblock %}

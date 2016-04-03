@@ -1,0 +1,225 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-03 23:25+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/users/account.html:7 templates/users/account.html.py:17
+#: templates/users/account.html:27 templates/users/notvuser_form.html.py:16
+#: templates/users/password_change_form.html:16
+msgid "Личный кабинет"
+msgstr ""
+
+#: templates/users/account.html:13 templates/users/index.html.py:13
+#: templates/users/login.html:13 templates/users/notvuser_form.html.py:12
+#: templates/users/password_change_form.html:12
+msgid "Главная страница"
+msgstr ""
+
+#: templates/users/account.html:31
+msgid "Добро пожаловать, "
+msgstr ""
+
+#: templates/users/account.html:35
+msgid ""
+"Страница с событиями конференции доступна по <a href=\"/events/\">ссылке.</a>"
+msgstr ""
+
+#: templates/users/account.html:60 templates/users/index.html.py:65
+#: templates/users/login.html:92
+msgid "Помощь в входе"
+msgstr ""
+
+#: templates/users/account.html:65 templates/users/index.html.py:70
+#: templates/users/login.html:97
+msgid ""
+"Укажите свои данные, которые были использованные при регистрации. Если вы не "
+"можете вспомнить свой пароль, то для востановления его перейдите по данной "
+"<a href=\"/user/password/reset/\">ссылке"
+msgstr ""
+
+#: templates/users/index.html:7 templates/users/index.html.py:17
+#: templates/users/index.html:27
+msgid "События конференции"
+msgstr ""
+
+#: templates/users/logged_out.html:4
+#: templates/users/password_change_done.html:6
+#: templates/users/password_reset_complete.html:6
+#: templates/users/password_reset_confirm.html:6
+#: templates/users/password_reset_done.html:6
+#: templates/users/password_reset_form.html:6
+msgid "Home"
+msgstr ""
+
+#: templates/users/logged_out.html:8
+msgid "Thanks for spending some quality time with the Web site today."
+msgstr ""
+
+#: templates/users/logged_out.html:10
+msgid "Log in again"
+msgstr ""
+
+#: templates/users/login.html:7 templates/users/login.html.py:17
+msgid "Войти в личный кабинет"
+msgstr ""
+
+#: templates/users/login.html:27
+msgid "Укажите свои учетные данные"
+msgstr ""
+
+#: templates/users/login.html:39 templates/users/notvuser_form.html.py:42
+msgid "Введите корректные электронную почту и пароль."
+msgstr ""
+
+#: templates/users/login.html:47 templates/users/notvuser_form.html.py:50
+msgid "Что-то пошло не так..."
+msgstr ""
+
+#: templates/users/login.html:64
+msgid "Войти"
+msgstr ""
+
+#: templates/users/notvuser_form.html:6 templates/users/notvuser_form.html:20
+#: templates/users/notvuser_form.html:30
+msgid "Изменение учетных данных"
+msgstr ""
+
+#: templates/users/notvuser_form.html:78
+msgid "Сохранить"
+msgstr ""
+
+#: templates/users/password_change_done.html:3
+msgid "Documentation"
+msgstr ""
+
+#: templates/users/password_change_done.html:3
+msgid "Change password"
+msgstr ""
+
+#: templates/users/password_change_done.html:3
+msgid "Log out"
+msgstr ""
+
+#: templates/users/password_change_done.html:7 users/views.py:77
+msgid "Password change"
+msgstr ""
+
+#: templates/users/password_change_done.html:14
+msgid "Your password was changed."
+msgstr ""
+
+#: templates/users/password_change_form.html:6
+#: templates/users/password_change_form.html:20
+#: templates/users/password_change_form.html:30
+msgid "Смена пароля"
+msgstr ""
+
+#: templates/users/password_change_form.html:64
+msgid "Сменить пароль"
+msgstr ""
+
+#: templates/users/password_reset_complete.html:7
+#: templates/users/password_reset_done.html:7
+#: templates/users/password_reset_form.html:7
+msgid "Password reset"
+msgstr ""
+
+#: templates/users/password_reset_complete.html:16
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr ""
+
+#: templates/users/password_reset_complete.html:18
+msgid "Log in"
+msgstr ""
+
+#: templates/users/password_reset_confirm.html:7
+msgid "Password reset confirmation"
+msgstr ""
+
+#: templates/users/password_reset_confirm.html:17
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+
+#: templates/users/password_reset_confirm.html:21
+msgid "New password:"
+msgstr ""
+
+#: templates/users/password_reset_confirm.html:23
+msgid "Confirm password:"
+msgstr ""
+
+#: templates/users/password_reset_confirm.html:24
+msgid "Change my password"
+msgstr ""
+
+#: templates/users/password_reset_confirm.html:29
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+
+#: templates/users/password_reset_done.html:15
+msgid ""
+"We've emailed you instructions for setting your password, if an account "
+"exists with the email you entered. You should receive them shortly."
+msgstr ""
+
+#: templates/users/password_reset_done.html:17
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with, and check your spam folder."
+msgstr ""
+
+#: templates/users/password_reset_email.html:2
+#, python-format
+msgid ""
+"You're receiving this email because you requested a password reset for your "
+"user account at %(site_name)s."
+msgstr ""
+
+#: templates/users/password_reset_email.html:4
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+
+#: templates/users/password_reset_email.html:8
+msgid "Your username, in case you've forgotten:"
+msgstr ""
+
+#: templates/users/password_reset_email.html:10
+msgid "Thanks for using our site!"
+msgstr ""
+
+#: templates/users/password_reset_email.html:12
+#, python-format
+msgid "The %(site_name)s team"
+msgstr ""
+
+#: templates/users/password_reset_form.html:15
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll email "
+"instructions for setting a new one."
+msgstr ""
+
+#: templates/users/password_reset_form.html:19
+msgid "Email address:"
+msgstr ""
+
+#: templates/users/password_reset_form.html:19
+msgid "Reset my password"
+msgstr ""

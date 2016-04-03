@@ -1,13 +1,112 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block content %}
+<div class="for-footer">
+    <div class="main-title">
+        <h1><span class="in"><span>{% trans 'Изменение учетных данных' %}</span></span></h1>
+    </div>
+    <div class="section breadcrumbs">
+        <div class="row">
+            <div class="col3">
+                <span class="breadcrumbs-item">
+                    <a href="http://notv.urfu.ru/ru">{% trans 'Главная страница' %}</a>
+                </span>
+                <span class="divide">/</span>
+                <span class="breadcrumbs-item">
+                    <a href="/account/">{% trans 'Личный кабинет' %}</a>
+                </span>
+                <span class="divide">/</span>
+                <span class="breadcrumbs-item">
+                    <a href="" class="no-underline"><span>{% trans 'Изменение учетных данных' %}</span></a>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="section content">
+        <div class="row">
+            <div class="col2 lea_alex">
+                <header>
+                    <h1 class="title">
+                      <span class="title-super">{% trans 'Изменение учетных данных' %}</span>
+                    </h1>
+                  </header>
 
-{% if request.user.is_authenticated %}
+<!-- начало формы  -->
 
-<form action="" method="post">{% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Update" />
-</form>
+        <div class="ui fluid error form segment">
 
-{%endif%}
+        {% if form.non_field_errors %}
+        {% for error in form.non_field_errors %}
+        <div class="ui error message">
+            <div class="header">Ошибка!</div>
+            <p>{% trans 'Введите корректные электронную почту и пароль.' %}</p>
+        </div>
+        {% endfor %}
+        {% endif %}
 
+        {% if form.errors and not form.non_field_errors %}
+        <div class="ui error message">
+            <div class="header">Error!</div>
+            <p>{% trans 'Что-то пошло не так...' %}</p>
+        </div>
+        {% endif %}
+
+        </div>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <!--<div class="cont-input"><label for="id_avatar">Аватар:</label> <input id="id_avatar" name="avatar" type="file"></div>-->
+<div class="cont-input"><label for="id_first_name">Имя:</label> <input id="id_first_name" maxlength="16" name="first_name" type="text" value="{{ user.first_name }}"></div>
+<div class="cont-input"><label for="id_last_name">Фамилия:</label> <input id="id_last_name" maxlength="32" name="last_name" type="text" value="{{ user.last_name }}"></div>
+<div class="cont-input"><label for="id_department">Университет/Подразделение:</label> <input id="id_department" maxlength="1024" name="department" type="text" value="{{ user.department }}"></div>
+<div class="cont-input"><label for="id_position">Должность:</label> <input id="id_position" maxlength="255" name="position" type="text" value="{{ user.position }}"></div>
+<div class="cont-input"><label for="id_tel">Телефон:</label> <input id="id_tel" maxlength="255" name="tel" type="text" value="{{ user.tel }}"></div>
+<div class="cont-input"><label for="id_status">Статус:</label> <select id="id_status" name="status">
+<option value="online"
+    {% if user.status == 'online' %}
+        selected="selected"
+    {% endif %}
+    >Заочно</option>
+<option value="offline"
+    {% if user.status == 'offline' %}
+        selected="selected"
+    {% endif %}
+        >Очно</option>
+</select></div>
+
+            <div class="cont-input cont-btn">
+                <input class="button_create" type="submit" value="{% trans 'Сохранить' %}"/>
+            </div>
+        </form>
+    </div>
+<!-- конец формы-->
+
+    </div>
+    <div class="col">
+        <aside role="complementary">
+            <style>
+            .smaller {
+              font-size:80%;
+            }
+            .gray {
+              color: #333;
+            }
+
+            .smaller-header {
+              font-size: 20px;
+            }
+            .justify {
+              text-align: justify;
+              text-indent: 20px;
+            }
+            .cont-input label {
+                width: 250px !important;
+                }
+            </style>
+  </aside>
+
+    </div>
+  </div>
+</div> <!-- /for-footer -->
+</div>
 {% endblock %}

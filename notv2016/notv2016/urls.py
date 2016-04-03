@@ -34,7 +34,7 @@ urlpatterns += [
     url(r'^login/$', login, {"template_name": "login.html"}),
     url(r'^logout/$', logout, {"next_page": "/"}),
     url(r'^register/$', register_user),
-    url(r'^$', index),
+    url(r'^events/$', index),
     url(r'^account/$', account),
     url(r'^account/update/$', NOTVUserUpdate.as_view(template_name ='notvuser_form.html', success_url="/account/")),
     url(r'^password/change/$', password_change),
