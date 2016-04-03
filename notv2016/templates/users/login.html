@@ -48,7 +48,7 @@
         </div>
         {% endif %}
 
-        <form method="post" action="login">
+        <form method="post" action="{% url 'users.views.index' %}">
             {% csrf_token %}
 
             <div class="cont-input">

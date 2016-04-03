@@ -47,7 +47,7 @@
         </div>
         {% endif %}
 
-        <form method="post" action="register/">
+        <form method="post" action="{% url 'users.views.register_user' %}">
             {% csrf_token %}
 
              <div class="cont-input">
@@ -57,7 +57,7 @@
              <div class="cont-input">
                  <label for="id_first_name">{{form.first_name.label_tag}}</label>
                  {{form.first_name}}
-                 
+
              </div>
              <div class="cont-input">
                  <label for="id_last_name">{{form.last_name.label_tag}}</label>
@@ -76,7 +76,7 @@
                  {{form.tel}}
              </div>
              <div class="cont-input">
-             <label for="id_status">{{form.status.label_tag}}</label> 
+             <label for="id_status">{{form.status.label_tag}}</label>
            {{form.status}}
            </div>
              <div class="cont-input">

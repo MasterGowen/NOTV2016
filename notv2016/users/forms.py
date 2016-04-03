@@ -39,7 +39,7 @@ class RegistrationForm(UserCreationForm):
     class Meta:
         model = NOTVUser
         fields = '__all__'
-        exclude = ['password', 'last_login', 'avatar', 'is_admin', 'is_superuser', 'is_paid']
+        exclude = ['password', 'last_login', 'avatar', 'is_admin', 'is_superuser', 'is_paid', 'groups']
 
     def clean_password2(self):
         password1 = self.cleaned_data.get('password1')

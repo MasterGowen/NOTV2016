@@ -19,7 +19,7 @@ from django.conf import settings
 
 from django.contrib.auth.views import login, logout, password_reset, password_reset_done, \
     password_reset_confirm, password_reset_complete
-from users.views import register_user, account
+from users.views import register_user, account, index
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -31,10 +31,11 @@ if 'rosetta' in settings.INSTALLED_APPS:
 
 # AAA
 urlpatterns += [
-    url(r'^login/', login, {"template_name": "login.html"}),
-    url(r'^logout/', logout, {"next_page": "/"}),
-    url(r'^register/', register_user),
-    url(r'^$', account),
+    url(r'^login/$', login, {"template_name": "login.html"}),
+    url(r'^logout/$', logout, {"next_page": "/"}),
+    url(r'^register/$', register_user),
+    url(r'^$', index),
+    url(r'^account/$', account),
     url(r'^user/password/reset/$', password_reset,
         {'post_reset_redirect': '/user/password/reset/done/',
         'email_template_name': 'password_reset_email.html',
