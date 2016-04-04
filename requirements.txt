@@ -4,8 +4,8 @@ MarkupSafe==0.23
 Pillow==3.1.1
 django-debug-toolbar==1.4
 django-reversion==1.10.1
--e git://github.com/MasterGowen/django-rosetta.git
-microsofttranslator==0.7
+#django-rosetta
+#microsofttranslator==0.7
 polib==1.0.7
 requests==2.9.1
 six==1.10.0

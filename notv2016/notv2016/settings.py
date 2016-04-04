@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'bwkc@kpk(b4wz^%3r*s=s3^*q4%9q2e7r5e1n$#uk=och*y3f_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'debug_toolbar',
-    'rosetta',
+#    'rosetta',
     'reversion',
     'users',
 ]
@@ -86,8 +86,11 @@ WSGI_APPLICATION = 'notv2016.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'notv',
+        'USER': 'notv',
+        'HOST': 'localhost',
+        'PASSWORD': 'Jt54SNA83fDAM4F2',
     }
 }
 
@@ -128,15 +131,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/notv/static/'
 APPEND_SLASH = True
 
 AUTH_USER_MODEL = 'users.NOTVUser'
-LOGIN_URL = '/login/'
+LOGIN_URL = '/notv/login/'
 LOGOUT_REDIRECT_URL = '/'
 
 
-STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
@@ -147,10 +149,15 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 
-STATIC_ROOT = '/static/'
+STATIC_ROOT = 'staticfiles/'
 
-EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'tmp', 'emails')
-
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 TRANSLATORS = ('mastergowen@gmail.com', )
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = False

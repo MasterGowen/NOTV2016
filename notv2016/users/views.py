@@ -4,6 +4,7 @@ from django.template.context_processors import csrf
 from django.contrib.auth import authenticate, login, update_session_auth_hash
 from django.shortcuts import resolve_url, get_object_or_404
 from django.contrib.auth.forms import PasswordChangeForm
+from django.contrib.auth.decorators import login_required
 from django.template.response import TemplateResponse
 from django.views.decorators.csrf import csrf_protect
 from django.views.generic.edit import UpdateView
@@ -28,7 +29,7 @@ def register_user(request):
             new_user = authenticate(email=request.POST['email'],
                                     password=request.POST['password1'])
             login(request, new_user)
-            return HttpResponseRedirect('/')
+            return HttpResponseRedirect('/notv/account/')
         else:
             logger.info('Invalid form')
     else:
@@ -88,6 +89,9 @@ class NOTVUserUpdate(UpdateView):
 
     def get_object(self):
         return get_object_or_404(NOTVUser, pk=self.request.session['_auth_user_id'])
+
+    def get_success_url(self):
+        return '/notv/account'
 
     def get_context_data(self, **kwargs):
 

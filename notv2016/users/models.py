@@ -43,18 +43,18 @@ class NOTVUser(AbstractBaseUser):
 
     first_name = models.CharField(
         verbose_name='Имя',
-        max_length=16,
+        max_length=1024,
         blank=True,
     )
 
     last_name = models.CharField(
         verbose_name='Фамилия',
-        max_length=32,
+        max_length=1024,
         blank=True,
     )
 
     department = models.CharField(
-        verbose_name='Университет/Подразделение',
+        verbose_name='Организация',
         max_length=1024,
         blank=True,
     )

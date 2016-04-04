@@ -30,14 +30,14 @@
 
 
         {% if request.user.is_authenticated %}
-            <a href="/logout/">Logout</a>
+            <a href="../logout/">Logout</a>
         {% else %}
-            <a href="/login/">Login</a>
-            <a href="/register/">Register</a>
+            <a href="../login/">Login</a>
+            <a href="../register/">Register</a>
         {%endif%}
 
     {% if request.user.is_authenticated %}
-        <a href="/account/">Личный кабинет</a>
+        <a href="../account/">Личный кабинет</a>
     {% endif %}
 
 
@@ -67,7 +67,7 @@
             <div class="cta cta-welcome">
                 <h3 class="gray smaller-header"></h3>
                 <p class="justify">
-                     {% trans 'Укажите свои данные, которые были использованные при регистрации. Если вы не можете вспомнить свой пароль, то для востановления его перейдите по данной <a href="/user/password/reset/">ссылке' %}</a>
+                     {% trans 'Укажите свои данные, которые были использованные при регистрации. Если вы не можете вспомнить свой пароль, то для востановления его перейдите по данной <a href="../user/password/reset/">ссылке' %}</a>
                 </p>
             </div>
 

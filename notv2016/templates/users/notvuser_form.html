@@ -13,7 +13,7 @@
                 </span>
                 <span class="divide">/</span>
                 <span class="breadcrumbs-item">
-                    <a href="/account/">{% trans 'Личный кабинет' %}</a>
+                    <a href="../account/">{% trans 'Личный кабинет' %}</a>
                 </span>
                 <span class="divide">/</span>
                 <span class="breadcrumbs-item">
@@ -56,8 +56,8 @@
 <form action="" method="post">
     {% csrf_token %}
     <!--<div class="cont-input"><label for="id_avatar">Аватар:</label> <input id="id_avatar" name="avatar" type="file"></div>-->
-<div class="cont-input"><label for="id_first_name">Имя:</label> <input id="id_first_name" maxlength="16" name="first_name" type="text" value="{{ user.first_name }}"></div>
-<div class="cont-input"><label for="id_last_name">Фамилия:</label> <input id="id_last_name" maxlength="32" name="last_name" type="text" value="{{ user.last_name }}"></div>
+<div class="cont-input"><label for="id_first_name">Имя:</label> <input id="id_first_name" maxlength="1024" name="first_name" type="text" value="{{ user.first_name }}"></div>
+<div class="cont-input"><label for="id_last_name">Фамилия:</label> <input id="id_last_name" maxlength="1024" name="last_name" type="text" value="{{ user.last_name }}"></div>
 <div class="cont-input"><label for="id_department">Университет/Подразделение:</label> <input id="id_department" maxlength="1024" name="department" type="text" value="{{ user.department }}"></div>
 <div class="cont-input"><label for="id_position">Должность:</label> <input id="id_position" maxlength="255" name="position" type="text" value="{{ user.position }}"></div>
 <div class="cont-input"><label for="id_tel">Телефон:</label> <input id="id_tel" maxlength="255" name="tel" type="text" value="{{ user.tel }}"></div>

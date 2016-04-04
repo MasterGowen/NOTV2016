@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load i18n %}
 {% block content %}
 <div class="for-footer">
     <div class="main-title">
@@ -89,7 +89,7 @@
              </div>
              <div class="cont-input cont-btn">
             <input class="button_create" value="Зарегистрироваться" type="submit" />
-            <input type="hidden" name="next" value="/" />
+            <input type="hidden" name="next" value="/notv/account/" />
             </div>
         </form>
 
@@ -127,22 +127,11 @@
   <h3 class="sr gray">Помощь в регистрации</h3>
 </header>
   <div class="cta cta-welcome">
-    <h3 class="gray smaller-header">Шаг первый</h3>
+    <h3 class="gray smaller-header">Инструкция</h3>
     <p class="justify">
-      Заполните все поля формы для регистрации. После нажатия кнопки «Зарегистрироваться» вы перейдете на страницу формирования траектории посещения мероприятий конференции, а на вашу электронную почту будет отправлена персональная ссылка на вашу траекторию.
+        {% trans "Заполните все поля формы для регистрации. После нажатия кнопки &laquo;Зарегистрироваться&raquo; вам будет открыт доступ в личный кабинет, где вам будет доступна программа конференции в формате выбора траектории посещения мероприятий." %}
     </p>
   </div>
-
-
-<div class="cta cta-nextsteps">
-  <h3 class="gray smaller-header">Шаг второй</h3>
-    <p class="justify">
-
-      Перейдя по вашей персональной ссылке вы сможете изменить вашу траекторию посещения мероприятий конференции, а также прикрепить или удалить документы для публикации в электронном сборнике.
-    </p>
-
-</div>
-
 
   <div class="cta cta-help">
     <h3 class="gray smaller-header">Нужна помощь?</h3>
