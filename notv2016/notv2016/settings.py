@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'bwkc@kpk(b4wz^%3r*s=s3^*q4%9q2e7r5e1n$#uk=och*y3f_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -38,8 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'debug_toolbar',
-#    'rosetta',
     'reversion',
     'users',
 ]
@@ -90,7 +88,7 @@ DATABASES = {
         'NAME': 'notv',
         'USER': 'notv',
         'HOST': 'localhost',
-        'PASSWORD': 'Jt54SNA83fDAM4F2',
+        'PASSWORD': '12345',
     }
 }
 

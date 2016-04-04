@@ -13,13 +13,11 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-import re
+
 from django.conf.urls import url, include, patterns
 from django.contrib import admin
 from django.conf import settings
 from django.views.static import serve
-
-import debug_toolbar
 
 from django.contrib.auth.views import login, logout, password_reset, password_reset_done, \
     password_reset_confirm, password_reset_complete
@@ -29,31 +27,34 @@ from users.views import register_user, account, index, password_change, NOTVUser
 urlpatterns = patterns(
     '',
     url(r'^notv/', include(patterns(
+        '',
 
-    url(r'^admin/', admin.site.urls),
-    url(r'^__debug__/', include(debug_toolbar.urls)),
-
-    url(r'^login/$', login, {"template_name": "login.html"}),
-    url(r'^logout/$', logout, {"next_page": "/notv/account"}),
-    url(r'^register/$', register_user),
-    url(r'^events/$', index),
-    url(r'^account/$', account),
-    url(r'^account/update/$', NOTVUserUpdate.as_view(template_name='notvuser_form.html', success_url="/account/")),
-    url(r'^password/change/$', password_change,
-        {"post_change_redirect": "notv/user/password/done"}),
-    url(r'^user/password/reset/$', password_reset,
-        {'post_reset_redirect': '/notv/user/password/reset/done/',
-        'email_template_name': 'password_reset_email.html',
-        "template_name": "password_reset_form.html"}, name="password_reset"),
-    url(r'^user/password/reset/done/$', password_reset_done,
-        {"template_name": "password_reset_done.html",
-        "post_change_redirect": "notv/user/password/done"},
-        ),
-    url(r'^reset/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$', password_reset_confirm, {'template_name': 'password_change_form.html',  'post_reset_redirect': '/notv/logout/'}),
-    url(r'^user/password/done/$', password_reset_complete,
-        {"template_name": "password_reset_complete.html"}),
-    url(r'^static/(?P<path>.*)$', serve,
-        {'document_root': settings.STATIC_ROOT}
-        ),
+        url(r'^login/$', login, {"template_name": "login.html"}),
+        url(r'^logout/$', logout, {"next_page": "/notv/account"}),
+        url(r'^register/$', register_user),
+        url(r'^events/$', index),
+        url(r'^account/$', account),
+        url(r'^account/update/$', NOTVUserUpdate.as_view(template_name='notvuser_form.html', success_url="/account/")),
+        url(r'^password/change/$', password_change,
+            {"post_change_redirect": "notv/user/password/done"}),
+        url(r'^user/password/reset/$', password_reset,
+            {'post_reset_redirect': '/notv/user/password/reset/done/',
+                'email_template_name': 'password_reset_email.html',
+                "template_name": "password_reset_form.html"}, name="password_reset"),
+        url(r'^user/password/reset/done/$', password_reset_done,
+            {"template_name": "password_reset_done.html",
+                "post_change_redirect": "notv/user/password/done"},
+            ),
+        url(r'^reset/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$', password_reset_confirm, {'template_name': 'password_change_form.html',  'post_reset_redirect': '/notv/logout/'}),
+        url(r'^user/password/done/$', password_reset_complete,
+            {"template_name": "password_reset_complete.html"}),
+        url(r'^static/(?P<path>.*)$', serve,
+            {'document_root': settings.STATIC_ROOT}
+            ),
     ),
     )))
+
+urlpatterns += patterns(
+    '',
+    url(r'^notv/admin/', admin.site.urls),
+    )
